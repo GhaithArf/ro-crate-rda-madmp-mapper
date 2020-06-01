@@ -1,0 +1,113 @@
+{
+  "dmp": {
+    "title": "World Development Indicators Visualization DMP",
+    "description": "Data Management Plan for the project World Development Indicators Visualization Dashboard.",
+    "language": "eng",
+    "modified": "2020-04-20 10:00",
+    "created": "2020-04-20 12:00",
+    "dmp_id": {
+      "identifier": "https://doi.org/10.5281/zenodo.3757932",
+      "type": "doi"
+    },
+    "contact": {
+      "name": "Ghaith Arfaoui",
+      "mbox": "ghaith.17@gmail.com",
+      "contact_id": {
+        "identifier": "https://orcid.org/0000-0001-9554-5684",
+        "type": "orcid"
+      }
+    },
+    "contributor": {
+      "name": "Ghaith Arfaoui",
+      "mbox": "ghaith.17@gmail.com",
+      "role": "Data Steward",
+      "contributor_id": {
+        "identifier": "https://orcid.org/0000-0001-9554-5684",
+        "type": "orcid"
+      }
+    },
+    "project": {
+      "title": "World Development Indicators Visualization Dashboard",
+      "end": "2020-04-20",
+      "start": "2020-02-01",
+      "description": "The project consists of analyzing a dataset using visual and statistical means in order to discover/find insights in it and then building an interactive visualization dashboard that can be used to analyze the discovered insights."
+    },
+    "dataset": [
+      {
+        "dataset_id": {
+          "identifier": "https://doi.org/10.5281/zenodo.1039839",
+          "type": "doi"
+        },
+        "title": "Gapminder World Development Indicators",
+        "description": "Gapminder represents a resource of several datasets containing information about (almost) all countries around the world over the last two centuries.",
+        "issued": "2017-10-31",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "raw data",
+        "metadata": {
+          "description": "Prodives description of the meaning of each filename of dataset files.",
+          "language": "eng"
+        },
+        "data_quality_assurance": "Multiple csv files are provided and the corresponding indicator is mentioned in the file name.",
+        "keyword": [
+          "Gapminder",
+          "World",
+          "World Indicators",
+          "World Development"
+        ],
+        "security_and_privacy": {
+          "description": "All data centers where project data is stored carry sufficient certifications. All project web services addressed via secure http (https://...). Project members have been instructed about both generic and specific risks to the project.\nThe possible impact to the project or organization if information is lost is small. The possible impact to the project or organization if information is leaked is small. The possible impact to the project or organization if information is vandalised is small. We are not using any personal information."
+        },
+        "distribution": {
+          "title": "GapMinder",
+          "format": "text/csv",
+          "data_access": "open",
+          "access_url": "https://www.gapminder.org/data/",
+          "download_url": "https://www.gapminder.org/data/",
+          "license": {
+            "start_date": "2017-10-31",
+            "license_ref": "https://zenodo.org/record/1039839"
+          }
+        }
+      },
+      {
+        "dataset_id": {
+          "identifier": "https://doi.org/10.5281/zenodo.3757329",
+          "type": "doi"
+        },
+        "title": "GapMinder World subset merged",
+        "description": "The data consists of multiple \"Gapminder World\" datasets merged together. Gapminder provides several datasets containing information about (almost) all countries around the world over the last two centuries.\nThe transformation consists of merging the CSV files and correcting the country and the region names when necessary.",
+        "issued": "2020-04-19",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "merged data",
+        "metadata": {
+          "description": "Describes the meaning and unit of each attribute in the dataset.",
+          "language": "eng"
+        },
+        "keyword": [
+          "Gapminder",
+          "World",
+          "World Indicators",
+          "World Development"
+        ],
+        "distribution": {
+          "format": "text/csv",
+          "data_access": "open",
+          "access_url": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+          "download_url": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+          "license": {
+            "start_date": "2020-05-02",
+            "license_ref": "https://creativecommons.org/licenses/by/4.0/legalcode"
+          }
+        },
+        "security_and_privacy": {
+          "description": "All data centers where project data is stored carry sufficient certifications. All project web services addressed via secure http (https://...). Project members have been instructed about both generic and specific risks to the project.\nThe possible impact to the project or organization if information is lost is small. The possible impact to the project or organization if information is leaked is small. The possible impact to the project or organization if information is vandalised is small. We are not using any personal information."
+        }
+      }
+    ],
+    "ethical_issues_exist": "no"
+  }
+}

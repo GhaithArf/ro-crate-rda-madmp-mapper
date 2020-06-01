@@ -1,0 +1,7 @@
+BagIt-Profile-Identifier: https://raw.githubusercontent.com/UTS-eResearch/RO-Crate/master/spec/1.0/profile-datacrate-v1.0.json
+DataCrate-Specification-Identifier: undefined
+Contact-Email: mike.lake@uts.edu.au
+Contact-Name: ID: mike.lake@uts.edu.au, contactType: customer service, email: mike.lake@uts.edu.au
+SourceOrganization: Sydney University Speleological Society
+External-Description: Sketchsheets and data from the Glop Pot cave survey
+Bagging-Date: 2019-07-18T03:02:02.256Z

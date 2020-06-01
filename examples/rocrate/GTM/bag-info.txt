@@ -1,0 +1,4 @@
+BagIt-Profile-Identifier: https://raw.githubusercontent.com/UTS-eResearch/RO-Crate/master/spec/1.0/profile-datacrate-v1.0.json
+DataCrate-Specification-Identifier: undefined
+External-Description: This demo is the sampling inference for Graph Topic Model, and more details about this model can be found in the following reference:                @ARTICLE{7015568,         author={J. Xuan and J. Lu and G. Zhang and X. Luo},         journal={IEEE Transactions on Cybernetics},         title={Topic Model for Graph Mining},         year={2015},         volume={45},         A Markov chain Monte Carlo (MCMC) algorithm is developed and implemented to inference the Graph Topic Model (GTM). GTM is a probabilistic graphical model for the data represented by graph structure, e.g., chemical formulas or documents.
+Bagging-Date: 2019-07-18T03:02:07.176Z

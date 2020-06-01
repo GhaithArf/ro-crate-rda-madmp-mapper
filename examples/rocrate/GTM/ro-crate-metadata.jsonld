@@ -1,0 +1,412 @@
+{
+  "@context": "https://raw.githubusercontent.com/ResearchObject/ro-crate/master/docs/0.2-DRAFT/context.json",
+  "@graph": [
+    {
+      "@id": "data/GTM",
+      "@type": "Dataset",
+      "citation": {
+        "@id": "http://dx.doi.org/10.1109/TCYB.2014.2386282"
+      },
+      "path": "data/GTM",
+      "creator": [
+        {
+          "@id": "http://orcid.org/0000-0002-8367-6908"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-0690-4732"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-3960-0583"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6953-3986"
+        }
+      ],
+      "datePublished": "2018-03-10",
+      "description": "This demo is the sampling inference for Graph Topic Model, and more details about this model can be found in the following reference:                @ARTICLE{7015568,         author={J. Xuan and J. Lu and G. Zhang and X. Luo},         journal={IEEE Transactions on Cybernetics},         title={Topic Model for Graph Mining},         year={2015},         volume={45},         A Markov chain Monte Carlo (MCMC) algorithm is developed and implemented to inference the Graph Topic Model (GTM). GTM is a probabilistic graphical model for the data represented by graph structure, e.g., chemical formulas or documents.",
+      "hasPart": [
+        {
+          "@id": "data/GTM/gtm_gs.m"
+        },
+        {
+          "@id": "data/GTM/LICENSE"
+        },
+        {
+          "@id": "data/GTM/README.txt"
+        },
+        {
+          "@id": "data/GTM/test_gtm.m"
+        },
+        {
+          "@id": "data/GTM/CATALOG"
+        }
+      ],
+      "identifier": "./GTM",
+      "license": {
+        "@id": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+      },
+      "name": "GTM",
+      "publisher": "University of Technology Sydney"
+    },
+    {
+      "@id": "data/GTM/CATALOG",
+      "@type": "Dataset",
+      "path": "data/GTM/CATALOG",
+      "hasPart": [
+        {
+          "@id": "data/GTM/CATALOG/LICENSE.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/README.txt.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/gtm_gs.m.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/http:__dx.doi.org_10.1109_TCYB.2014.2386282.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0002-8367-6908.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0003-0690-4732.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0003-3960-0583.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/http:__uts.edu.au.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/https:__orcid.org_0000-0002-6953-3986.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/https:__www.gnu.org_licenses_gpl-3.0.en.html.html"
+        },
+        {
+          "@id": "data/GTM/CATALOG/test_gtm.m.html"
+        }
+      ],
+      "identifier": "./GTM/CATALOG"
+    },
+    {
+      "@id": "data/GTM/CATALOG/LICENSE.html",
+      "@type": "File",
+      "contentSize": "3279",
+      "path": "data/GTM/CATALOG/LICENSE.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/LICENSE.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/README.txt.html",
+      "@type": "File",
+      "contentSize": "3298",
+      "path": "data/GTM/CATALOG/README.txt.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/README.txt.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/gtm_gs.m.html",
+      "@type": "File",
+      "contentSize": "3287",
+      "path": "data/GTM/CATALOG/gtm_gs.m.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/gtm_gs.m.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/http:__dx.doi.org_10.1109_TCYB.2014.2386282.html",
+      "@type": "File",
+      "contentSize": "4159",
+      "path": "data/GTM/CATALOG/http:__dx.doi.org_10.1109_TCYB.2014.2386282.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/http:__dx.doi.org_10.1109_TCYB.2014.2386282.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0002-8367-6908.html",
+      "@type": "File",
+      "contentSize": "3649",
+      "path": "data/GTM/CATALOG/http:__orcid.org_0000-0002-8367-6908.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/http:__orcid.org_0000-0002-8367-6908.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0003-0690-4732.html",
+      "@type": "File",
+      "contentSize": "3464",
+      "path": "data/GTM/CATALOG/http:__orcid.org_0000-0003-0690-4732.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/http:__orcid.org_0000-0003-0690-4732.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/http:__orcid.org_0000-0003-3960-0583.html",
+      "@type": "File",
+      "contentSize": "3479",
+      "path": "data/GTM/CATALOG/http:__orcid.org_0000-0003-3960-0583.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/http:__orcid.org_0000-0003-3960-0583.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/http:__uts.edu.au.html",
+      "@type": "File",
+      "contentSize": "2228",
+      "path": "data/GTM/CATALOG/http:__uts.edu.au.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/http:__uts.edu.au.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/https:__orcid.org_0000-0002-6953-3986.html",
+      "@type": "File",
+      "contentSize": "3474",
+      "path": "data/GTM/CATALOG/https:__orcid.org_0000-0002-6953-3986.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/https:__orcid.org_0000-0002-6953-3986.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/https:__www.gnu.org_licenses_gpl-3.0.en.html.html",
+      "@type": "File",
+      "contentSize": "3244",
+      "path": "data/GTM/CATALOG/https:__www.gnu.org_licenses_gpl-3.0.en.html.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/https:__www.gnu.org_licenses_gpl-3.0.en.html.html"
+    },
+    {
+      "@id": "data/GTM/CATALOG/test_gtm.m.html",
+      "@type": "File",
+      "contentSize": "3298",
+      "path": "data/GTM/CATALOG/test_gtm.m.html",
+      "encodingFormat": "Hypertext Markup Language",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/96",
+      "name": "GTM/CATALOG/test_gtm.m.html"
+    },
+    {
+      "@id": "data/GTM/LICENSE",
+      "@type": "File",
+      "contentSize": "35049",
+      "path": "data/GTM/LICENSE",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "GTM/LICENSE"
+    },
+    {
+      "@id": "data/GTM/README.txt",
+      "@type": "File",
+      "contentSize": "984",
+      "path": "data/GTM/README.txt",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "GTM/README.txt"
+    },
+    {
+      "@id": "data/GTM/gtm_gs.m",
+      "@type": "File",
+      "contentSize": "12656",
+      "path": "data/GTM/gtm_gs.m",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "GTM/gtm_gs.m"
+    },
+    {
+      "@id": "data/GTM/test_gtm.m",
+      "@type": "File",
+      "contentSize": "527",
+      "path": "data/GTM/test_gtm.m",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "GTM/test_gtm.m"
+    },
+    {
+      "@id": "data/LICENSE",
+      "@type": "File",
+      "contentSize": "35049",
+      "path": "data/LICENSE",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "LICENSE"
+    },
+    {
+      "@id": "data/README.txt",
+      "@type": "File",
+      "contentSize": "984",
+      "path": "data/README.txt",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "README.txt"
+    },
+    {
+      "@id": "data/gtm_gs.m",
+      "@type": "File",
+      "contentSize": "12656",
+      "path": "data/gtm_gs.m",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "gtm_gs.m"
+    },
+    {
+      "@id": "http://dx.doi.org/10.1109/TCYB.2014.2386282",
+      "@type": "ScholarlyArticle",
+      "journal": "IEEE Transactions on Cybernetics",
+      "creator": [
+        {
+          "@id": "http://orcid.org/0000-0002-8367-6908"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-0690-4732"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-3960-0583"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6953-3986"
+        }
+      ],
+      "datePublished": "2015",
+      "identifier": [
+        "http://dx.doi.org/10.1109/TCYB.2014.2386282",
+        "dx.doi.org/10.1109/TCYB.2014.2386282"
+      ],
+      "issn": "2168-2267",
+      "name": "Topic Model for Graph Mining"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-8367-6908",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "familyName": "Xuan",
+      "givenName": "J",
+      "identifier": "http://orcid.org/0000-0002-8367-6908",
+      "name": "J. Xuan"
+    },
+    {
+      "@id": "http://orcid.org/0000-0003-0690-4732",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "familyName": "Lu",
+      "givenName": "J",
+      "identifier": "http://orcid.org/0000-0003-0690-4732",
+      "name": "J. Lu"
+    },
+    {
+      "@id": "http://orcid.org/0000-0003-3960-0583",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "familyName": "Zhang",
+      "givenName": "G",
+      "identifier": "http://orcid.org/0000-0003-3960-0583",
+      "name": "G. Zhang"
+    },
+    {
+      "@id": "http://uts.edu.au",
+      "identifier": "http://uts.edu.au",
+      "name": "University of Technology Sydney",
+      "@type": [
+        "Thing"
+      ]
+    },
+    {
+      "@id": "https://doi.org/10.4225/59/59e3d6d08faa9",
+      "@type": "Dataset",
+      "citation": {
+        "@id": "http://dx.doi.org/10.1109/TCYB.2014.2386282"
+      },
+      "path": "./",
+      "creator": [
+        {
+          "@id": "http://orcid.org/0000-0002-8367-6908"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-0690-4732"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-3960-0583"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6953-3986"
+        }
+      ],
+      "datePublished": "2018-03-10",
+      "description": "This demo is the sampling inference for Graph Topic Model, and more details about this model can be found in the following reference:                @ARTICLE{7015568,         author={J. Xuan and J. Lu and G. Zhang and X. Luo},         journal={IEEE Transactions on Cybernetics},         title={Topic Model for Graph Mining},         year={2015},         volume={45},         A Markov chain Monte Carlo (MCMC) algorithm is developed and implemented to inference the Graph Topic Model (GTM). GTM is a probabilistic graphical model for the data represented by graph structure, e.g., chemical formulas or documents.",
+      "hasPart": [
+        {
+          "@id": "data/gtm_gs.m"
+        },
+        {
+          "@id": "data/LICENSE"
+        },
+        {
+          "@id": "data/README.txt"
+        },
+        {
+          "@id": "data/test_gtm.m"
+        },
+        {
+          "@id": "data/GTM"
+        }
+      ],
+      "identifier": [
+        "https://doi.org/10.4225/59/59e3d6d08faa9",
+        "doi.org/10.4225/59/59e3d6d08faa9"
+      ],
+      "license": {
+        "@id": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+      },
+      "name": "GTM",
+      "publisher": "University of Technology Sydney",
+      "distribution": [
+        {
+          "@id": "https://data.research.uts.edu.au/examples/ro-crate/0.2GTM.zip"
+        }
+      ]
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6953-3986",
+      "@type": "Person",
+      "affiliation": "University of Technology Sydney",
+      "familyName": "Luo",
+      "givenName": "X",
+      "identifier": "https://orcid.org/0000-0002-6953-3986",
+      "name": "X. Luo"
+    },
+    {
+      "@id": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+      "description": "GNU GENERAL PUBLIC LICENSE\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\nVersion 3, 29 June 2007",
+      "identifier": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+      "name": "GPL 3",
+      "@type": [
+        "Thing"
+      ]
+    },
+    {
+      "@id": "data/test_gtm.m",
+      "@type": "File",
+      "contentSize": "527",
+      "path": "data/test_gtm.m",
+      "encodingFormat": "Plain Text File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/x-fmt/111",
+      "license": "GPL 3",
+      "name": "test_gtm.m"
+    },
+    {
+      "@id": "https://data.research.uts.edu.au/examples/ro-crate/0.2GTM.zip",
+      "contentUrl": "https://data.research.uts.edu.au/examples/ro-crate/0.2GTM.zip",
+      "@type": "DataDownload",
+      "encodingFormat": "zip"
+    }
+  ]
+}
