@@ -1,9 +1,11 @@
 ## Assumptions
+
 <p>
   DMPs can include multiple datasets. However, ro-crate include only one
-  dataset. The dataset can include other nested datasets. It is assumed that the
-  data for the dataset at the root is equivalent to the data of DMP. Nested
-  datasets will be included as elements of distributions.
+  dataset. The dataset can include other nested datasets. It is assumed that
+  most of the data for the dataset at the root (e.g. funding, contributors,
+  authors,...) is equivalent to the data of DMP. Nested datasets will be
+  included as elements of distributions.
 </p>
 <p>
   RO-crates have to have @id for each property. Otherwise, the jsonld generated
@@ -61,6 +63,15 @@
       <td valign="top">name</td>
       <td valign="top">contact</td>
       <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">contactType</td>
+      <td valign="top">ContactPoint</td>
+      <td valign="top">type</td>
+      <td valign="top">contact</td>
+      <td valign="top">
+        These attributes are not exactly equivalent. But, they are close enough.
+      </td>
     </tr>
     <tr>
       <td valign="top">author/creator</td>
@@ -132,7 +143,7 @@
       <td valign="top"></td>
     </tr>
     <tr>
-      <td valign="top">name</td>
+      <td valign="top">@id</td>
       <td valign="top">cost</td>
       <td valign="top">title</td>
       <td valign="top">cost</td>
@@ -144,34 +155,6 @@
       <td valign="top">value</td>
       <td valign="top">cost</td>
       <td valign="top"></td>
-    </tr>
-    <tr>
-      <td valign="top">value</td>
-      <td valign="top">cost</td>
-      <td valign="top">value</td>
-      <td valign="top">cost</td>
-      <td valign="top"></td>
-    </tr>
-    <tr>
-      <td valign="top">description</td>
-      <td valign="top">Dataset</td>
-      <td valign="top">description</td>
-      <td valign="top">dmp</td>
-      <td valign="top">
-        It is assumed that the description of the DMP is the same as the
-        desciption of the ro-crate.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">identifier</td>
-      <td valign="top">Dataset</td>
-      <td valign="top">identifier</td>
-      <td valign="top">dmp_id</td>
-      <td valign="top">
-        It is assumed that the identifier of the dataset in ro-crate is the
-        identifier of DMP. This is not always safe. The user is advised to
-        create an identifier for the DMP as it is a broader concept.
-      </td>
     </tr>
     <tr>
       <td valign="top">Language</td>
@@ -181,16 +164,171 @@
       <td valign="top"></td>
     </tr>
     <tr>
+      <td valign="top">description</td>
+      <td valign="top">Dataset</td>
+      <td valign="top">description</td>
+      <td valign="top">dataset</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
       <td valign="top">name</td>
       <td valign="top">Dataset</td>
       <td valign="top">title</td>
-      <td valign="top">dmp</td>
+      <td valign="top">dataset</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">identifier</td>
+      <td valign="top">Dataset</td>
+      <td valign="top">identifier</td>
+      <td valign="top">dataset_id</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">Dataset</td>
+      <td valign="top">hasPart</td>
+      <td valign="top">distribution</td>
+      <td valign="top">dataset</td>
+      <td valign="top">
+        Ro-crates usually include a lot of sub-datasets. They usually include
+        information about the main dataset like encoding and size. Therefore,
+        they are accounted for as distributions.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">File</td>
+      <td valign="top">hasPart</td>
+      <td valign="top">distribution</td>
+      <td valign="top">dataset</td>
+      <td valign="top">
+        Ro-crates usually include a lot of sub-Files. Sub-datasets have
+        sub-Files. Deeply nested files will not be taken into consideration.
+        This is because it does not aline with the concept of distribution.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">downloadUrl</td>
+      <td valign="top">DataDownload</td>
+      <td valign="top">download_url</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">contentUrl</td>
+      <td valign="top">DataDownload</td>
+      <td valign="top">access_url</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">endDate</td>
+      <td valign="top">DataDownload</td>
+      <td valign="top">available_until</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">contentSize</td>
+      <td valign="top">Dataset</td>
+      <td valign="top">byte_size</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">contentSize</td>
+      <td valign="top">Dataset/File</td>
+      <td valign="top">byte_size</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">encodingFormat</td>
+      <td valign="top">Dataset/File</td>
+      <td valign="top">format</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">name</td>
+      <td valign="top">contentLocation</td>
+      <td valign="top">geo_location</td>
+      <td valign="top">host</td>
+      <td valign="top">
+        It is assumed that the name is a country. But, it is not always the
+        case. But, it is better than losing th e information.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">title</td>
+      <td valign="top">RepositoryObject</td>
+      <td valign="top">title</td>
+      <td valign="top">host</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">description</td>
+      <td valign="top">RepositoryObject</td>
+      <td valign="top">description</td>
+      <td valign="top">host</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">@id</td>
+      <td valign="top">RepositoryObject</td>
+      <td valign="top">url</td>
+      <td valign="top">host</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">availability</td>
+      <td valign="top">RepositoryObject</td>
+      <td valign="top">availability</td>
+      <td valign="top">host</td>
+      <td valign="top">
+        availability is not defined exactly the same for ro-crate and DMP in
+        terms of the format of the inputed value.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">license</td>
+      <td valign="top">Dataset/File</td>
+      <td valign="top">license</td>
+      <td valign="top">distribution</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">@id</td>
+      <td valign="top">license</td>
+      <td valign="top">license_ref</td>
+      <td valign="top">license</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">identifier</td>
+      <td valign="top">license</td>
+      <td valign="top">license_ref</td>
+      <td valign="top">license</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">datePublished</td>
+      <td valign="top">Dataset</td>
+      <td valign="top">issued</td>
+      <td valign="top">dataset</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">keywords</td>
+      <td valign="top">Dataset</td>
+      <td valign="top">keyword</td>
+      <td valign="top">dataset</td>
       <td valign="top"></td>
     </tr>
   </tbody>
 </table>
 
-## Unmapped Properties of RDA DMP
+## Unmapped Properties of DMP
+
 <table style="width: 99%;">
   <thead>
     <tr>
@@ -208,10 +346,13 @@
       </td>
     </tr>
     <tr>
-      <td valign="top">contact_id, contributor_id, dmp_id</td>
+      <td valign="top">
+        contact_id, contributor_id, dmp_id, dataset_id, hasPart, host
+      </td>
       <td valign="top">
         For these attributes, there isn't an equivalent attribute. But, their
-        children have equivalent attributes.
+        children have equivalent attributes. The equivalence is not needed and
+        it is not classified as missing.
       </td>
     </tr>
     <tr>
@@ -236,11 +377,34 @@
     </tr>
     <tr>
       <td valign="top">
-        ethical_issues_description, ethical_issues_exist, ethical_issues_report
+        personal_data, preservation_statement, preservation_statement,
+        security_and_privacy, data_access, storage_type, pid_system,
+        certified_with, backup_type, backup__frequency,
+        ethical_issues_description, ethical_issues_exist, ethical_issues_report,
+        data_quality_assurance, sensitive_data
       </td>
       <td valign="top">
-        Equivalents to these attributes were not found in
-        https://w3id.org/ro/crate/1.0/context.
+        Almost all attributes which have to do with quality, privacy, ethics and
+        security are missing in ro-crate and connot be translated. PS:
+        accessMode in https://w3id.org/ro/crate/1.0/context is different from
+        data_access.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">support_versioning</td>
+      <td valign="top">
+        This specific attribute has no equivalent in the context. However, there
+        is the possibility to include the specific versions with other
+        attributes.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">identifier, description, title</td>
+      <td valign="top">
+        These attributes have to be inputed by the user. It is wrong to assume
+        that the DMP's identifier is the same as the dataset's identifier. The
+        user should create a new identifier for the DMP. It is also not always
+        logical to give the DMP the name of the dataset.
       </td>
     </tr>
   </tbody>
