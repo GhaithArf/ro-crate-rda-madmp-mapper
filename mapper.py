@@ -16,6 +16,7 @@ class Mapper:
     def __init__(self, root_folder_path, output_path):
         self.root_folder_path = root_folder_path
         self.output_path = output_path
+        self.madmp = {}
 
     def is_rocrate(self):
         """Check on a high level whether the provided root folder is for a rocrate."""
@@ -29,7 +30,13 @@ class Mapper:
         return False
 
     def is_madmp(self):
-        return False
+        try:
+            print("Checking if file is a madmp...")
+            self.madmp = MADMP(self.root_folder_path)
+            return True
+        except:
+            print("File is NOT a madmp...")
+            return False
 
     def rocrate_to_madmp(self):
         try:
@@ -54,17 +61,22 @@ class Mapper:
             print("ERROR:", e)
 
     def madmp_to_rocrate(self, generate_preview=True):
-        pass
+        try:
+            print("Converting madmp to ro-crate(s)...")
+            self.madmp.convert_madmp_to_rocrate(self.output_path)
+        except Exception as e:
+            print("Failed to convert madmp to ro-crate(s).")
+            print("ERROR:", e)
 
 
 def run(root_folder_path, output_path):
     mapper = Mapper(root_folder_path, output_path)
-    if mapper.is_rocrate:
+    if mapper.is_rocrate():
         mapper.rocrate_to_madmp()
-    elif is_madmp:
+    elif mapper.is_madmp():
         mapper.madmp_to_rocrate()
     else:
-        raise Exception("The root folder includes neither ro-crate nor madmp.")
+        print("The root folder includes neither ro-crate nor madmp.")
 
 
 if __name__ == '__main__':
