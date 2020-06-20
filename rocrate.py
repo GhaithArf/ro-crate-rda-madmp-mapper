@@ -5,6 +5,7 @@ import pprint
 from utils import get_json_keys, load_rocrate_schema, find_parent_keys, flatten_json, unflatten_json, remove_digits_string
 import re
 import ast
+from datetime import datetime
 
 
 _ROCRATE_METADATA_FILENAME = "ro-crate-metadata.jsonld"
@@ -53,7 +54,7 @@ class ROCrate:
             self.root_folder) if file.endswith('.jsonld')]
         if metadata_file:
             with open("{}/{}".format(self.root_folder, metadata_file[0]), 'r') as file:
-                if metadata_file != _ROCRATE_METADATA_FILENAME:
+                if metadata_file[0] != _ROCRATE_METADATA_FILENAME:
                     print("Warning: Metadata file name: '{}' is different than {}".format(
                         metadata_file, _ROCRATE_METADATA_FILENAME))
                 print("Loading metadata file...")
@@ -112,6 +113,14 @@ class ROCrate:
             print("Unable to locate preview webpage.")
             return None
 
+    def convert_rocrate_to_maDMP(self):
+        """Convert one rocrate to one initial DMP and save it.
+        """
+        self.nest_rocrate()
+        self.flatten_rocrate()
+        part_of_madmp = self.flat_rocrate_to_madmp()
+        return part_of_madmp
+
     def nest_rocrate(self, include_type=True):
         """Converts self.metadata from a flat jsonld to a nested json.
 
@@ -159,6 +168,8 @@ class ROCrate:
         madmp_initial = {}
         self._modify_based_on_root(eq_dmp, madmp_initial)
         # convert the keys
+        with open(r"C:\Users\Maroua Jaoua\Desktop\Data Science Master\Data Stewardship\madmp_initial.json", 'w') as f:
+            json.dump(madmp_initial, f, indent=4)
         level_id = 0
         for key_flat, value_flat in madmp_initial.items():
             key_clean = remove_digits_string(key_flat)
@@ -180,6 +191,8 @@ class ROCrate:
                 madmp[k_flat] = value_flat
         self.add_necessary_missing_att(madmp)
         madmp = unflatten_json(madmp)
+        with open(r"C:\Users\Maroua Jaoua\Desktop\Data Science Master\Data Stewardship\madmp_unflat.json", 'w') as f:
+            json.dump(mapping_data, f, indent=4)
         return madmp
 
     def has_preview_files(self):
@@ -191,6 +204,54 @@ class ROCrate:
         # alongside the RO-Crate Metadata File, and/or appear in sub-directories of the RO-Crate Root. Each file and
         # directory MAY be represented as Data Entities in the RO-Crate Metadata File.
         pass
+
+    @staticmethod
+    def merge_converted_rocrates(list_of_dicts, output_path):
+        """merge converted rocrates into just one madmp. 
+        Add some missing properties and save."""
+        # clean
+        final_madmp = {}
+        final_madmp["dmp"] = {}
+
+        for dictionary in list_of_dicts:
+            for key, value in dictionary["dmp"].items():
+                # and type(value) is dict:
+                if key not in final_madmp["dmp"].keys():
+                    if type(value) is dict:
+                        final_madmp["dmp"][key] = [value]
+                    else:
+                        final_madmp["dmp"][key] = value
+                elif type(final_madmp["dmp"][key]) is list:
+                    if type(value) is list:
+                        for v in value:
+                            final_madmp["dmp"][key].append(v)
+                    else:
+                        final_madmp["dmp"][key].append(value)
+                else:
+                    final_madmp["dmp"][key] = value
+
+        # set some defaults because they have no equivalents
+        final_madmp["dmp"]["dmp_id"] = {
+            "identifier": "Please Create an identifier for DMP",
+            "type": "PLease fill in the type of the identifier"}
+        final_madmp["dmp"]["title"] = "DMP title"
+        final_madmp["dmp"]["created"] = datetime.now().strftime(
+            "%Y-%m-%d %H:%M")
+        final_madmp["dmp"]["modified"] = datetime.now().strftime(
+            "%Y-%m-%d %H:%M")
+        final_madmp["dmp"]["ethical_issues_exist"] = "unknown"
+        # save json
+        try:
+            print("Saving the generated madmp to the provided path...")
+            with open(join(output_path, "generated-dmp.json"), 'w') as f:
+                json.dump(final_madmp, f, indent=4)
+            print("Saving is complete.")
+            print("The path of the generated madmp is:", join(
+                output_path, "generated-dmp.json"))
+        except Exception as e:
+            print("Failed to save the generated madmp.")
+            print("ERROR:", e)
+        return final_madmp
 
     @staticmethod
     def _get_identifiers(jsonld_graph, idns):
@@ -240,8 +301,8 @@ class ROCrate:
 
         :return: str containing joint keys corresponding to the root.
         """
-        for key_flat, value_flat in self.metadata.items():
-            if key_flat.endswith("path") or key_flat.endswith("@id") and value_flat == "./":
+        for key_flat in sorted(self.metadata, key=len):
+            if key_flat.endswith("path") or key_flat.endswith("@id") and self.metadata[key_flat] == "./":
                 return ".".join(key_flat.split(".")[:-1])
 
     def _modify_based_on_root(self, eq_dmp, madmp_initial):
