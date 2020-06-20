@@ -46,6 +46,6 @@
   "author.person.affiliation": "contributor.role",
   "author.person.email": "contributor.mbox",
   "funder.Organisation.@id": "project.funding.funder_id.identifier",
-  "funder.Organisation.name": "project.funding.title",
   "funder.Organisation.description": "project.funding.description"
+  "funder.Organisation.name": "project.funding.title",
 }
