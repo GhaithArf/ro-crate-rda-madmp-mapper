@@ -21,11 +21,12 @@ class Mapper:
     def is_rocrate(self):
         """Check on a high level whether the provided root folder is for a rocrate."""
         print("Checking if file is a ro-crate...")
-        files = [p[2] for p in walk(self.root_folder_path)]
-        for file in files:
-            if file == "ro-crate-metadata.jsonld":
-                print("File is a ro-crate...")
-                return True
+        filenames = [p[2] for p in walk(self.root_folder_path)]
+        for filename in filenames:
+            for file in filename:
+                if file == "ro-crate-metadata.jsonld":
+                    print("File is a ro-crate...")
+                    return True
         print("File is NOT a ro-crate...")
         return False
 
@@ -38,26 +39,22 @@ class Mapper:
             print("File is NOT a madmp...")
             return False
 
-    def rocrate_to_madmp(self):
+    def rocrates_to_madmp(self):
         try:
-            rocrate = ROCrate(self.root_folder_path)
-            print("Converting ro-crate to madmp...")
-            rocrate.nest_rocrate()
-            rocrate.flatten_rocrate()
-            madmp = rocrate.flat_rocrate_to_madmp()
+            print("Converting ro-crate(s) to madmp...")
+            filepaths = [join(path, name) for path, subdirs, files in walk(
+                self.root_folder_path) for name in files]
+            all_parts = []
+            for filepath in filepaths:
+                if filepath.endswith("ro-crate-metadata.jsonld"):
+                    rocrate = ROCrate(filepath.split(
+                        "ro-crate-metadata.jsonld")[0])
+                    part_of_madmp = rocrate.convert_rocrate_to_maDMP()
+                    all_parts.append(part_of_madmp)
+            rocrate.merge_converted_rocrates(all_parts, self.output_path)
             print("Conversion is complete.")
         except Exception as e:
-            print("Failed to convert ro-crate to madmp.")
-            print("ERROR:", e)
-        try:
-            print("Saving the generated madmp to the provided path...")
-            with open(join(self.output_path, "generated-dmp.json"), 'w') as f:
-                json.dump(madmp, f)
-            print("Saving is complete.")
-            print("The path of the generated madmp is:", join(
-                self.output_path, "generated-dmp.json"))
-        except Exception as e:
-            print("Failed to save the generated madmp.")
+            print("Failed to convert ro-crate(s) to madmp.")
             print("ERROR:", e)
 
     def madmp_to_rocrate(self, generate_preview=True):
@@ -72,7 +69,7 @@ class Mapper:
 def run(root_folder_path, output_path):
     mapper = Mapper(root_folder_path, output_path)
     if mapper.is_rocrate():
-        mapper.rocrate_to_madmp()
+        mapper.rocrates_to_madmp()
     elif mapper.is_madmp():
         mapper.madmp_to_rocrate()
     else:
