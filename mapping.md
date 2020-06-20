@@ -324,6 +324,69 @@
       <td valign="top">dataset</td>
       <td valign="top"></td>
     </tr>
+    <tr>
+      <td valign="top">description</td>
+      <td valign="top">Organisation</td>
+      <td valign="top">description</td>
+      <td valign="top">project</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">name</td>
+      <td valign="top">Organisation</td>
+      <td valign="top">title</td>
+      <td valign="top">project</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">name</td>
+      <td valign="top">Organisation</td>
+      <td valign="top">title</td>
+      <td valign="top">project</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">endDate</td>
+      <td valign="top">Organisation</td>
+      <td valign="top">end</td>
+      <td valign="top">project</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">startDate</td>
+      <td valign="top">Organisation</td>
+      <td valign="top">start</td>
+      <td valign="top">project</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">@id</td>
+      <td valign="top">Grant</td>
+      <td valign="top">identifier</td>
+      <td valign="top">funder_id</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">@id</td>
+      <td valign="top">CreativeWork</td>
+      <td valign="top">identifier</td>
+      <td valign="top">metadata_standard_id</td>
+      <td valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">Language</td>
+      <td valign="top">CreativeWork</td>
+      <td valign="top">language</td>
+      <td valign="top">dmp</td>
+      <td valign="top">metadata</td>
+    </tr>
+    <tr>
+      <td valign="top">description</td>
+      <td valign="top">CreativeWork</td>
+      <td valign="top">description</td>
+      <td valign="top">dmp</td>
+      <td valign="top">metadata</td>
+    </tr>
   </tbody>
 </table>
 
@@ -347,7 +410,8 @@
     </tr>
     <tr>
       <td valign="top">
-        contact_id, contributor_id, dmp_id, dataset_id, hasPart, host
+        contact_id, contributor_id, dmp_id, dataset_id, hasPart, host, project,
+        metadata_standard_id, funder_id
       </td>
       <td valign="top">
         For these attributes, there isn't an equivalent attribute. But, their
@@ -399,6 +463,13 @@
       </td>
     </tr>
     <tr>
+      <td valign="top">funding_status</td>
+      <td valign="top">
+        The definition provided in DMP official description does not match any
+        of the descriptions for the ro-crate.
+      </td>
+    </tr>
+    <tr>
       <td valign="top">identifier, description, title</td>
       <td valign="top">
         These attributes have to be inputed by the user. It is wrong to assume
@@ -428,6 +499,33 @@
         schema. When automatically generating a ro-crate, they are inserted as
         they can be programatically determined. When generating DMPs, they are
         ignored.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">hasPart, hasMember</td>
+      <td valign="top">
+        DMPs do not have the equivalent of these attributes. However, they are
+        accounted for by including their values in distributions.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">publisher, sameAs, temporalCoverage</td>
+      <td valign="top">
+        These attributes are not included as explicitly in DMPs.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">CreateAction, UpdateAction</td>
+      <td valign="top">
+        CreateAction and UpdateAction classes are there to model the
+        contributions of Context Entities of type Person or Organization. This
+        is not present in DMPs.
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">latitude, longitude</td>
+      <td valign="top">
+        Places are described more thouroughly in ro-crates.
       </td>
     </tr>
   </tbody>
