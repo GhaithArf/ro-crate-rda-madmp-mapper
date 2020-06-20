@@ -1,0 +1,57 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/",
+            "@type": "license"
+        },
+        {
+            "@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/",
+            "@type": "File"
+        },
+        {
+            "contentUrl": "https://github.com/MarouaJaoua/DataStewardship1",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-8109-9644",
+            "email": "maroua.jaoua@student.tuwien.ac.at",
+            "name": "Maroua Jaoua",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0001-8109-9644"
+            },
+            "description": "Predict and analyze life expectancy",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://github.com/MarouaJaoua/DataStewardship1",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo/"
+                }
+            ],
+            "datePublished": "2020-03-29",
+            "name": "Source Code",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

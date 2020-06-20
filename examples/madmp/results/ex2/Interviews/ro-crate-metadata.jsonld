@@ -1,0 +1,56 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "endDate": "2029-01-30",
+            "@type": "DataDownload"
+        },
+        {
+            "contentSize": 6934576883,
+            "description": "All interviews with people from...",
+            "encodingFormat": "audio/mpeg3",
+            "@id": "Collection of recordings",
+            "@type": "File"
+        },
+        {
+            "@id": "https://orcid.org/0000-0000-0000-0000",
+            "email": "TMiksa@sba-research.org",
+            "name": "Tomasz Miksa",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0000-0000-0000"
+            },
+            "identifier": "10.5281/zenodo.1200361",
+            "description": "Audio recordings of interviews",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "endDate": "2029-01-30",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "Collection of recordings"
+                }
+            ],
+            "name": "Interviews",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

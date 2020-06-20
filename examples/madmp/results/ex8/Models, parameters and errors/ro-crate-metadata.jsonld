@@ -1,0 +1,68 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+            "@type": "license"
+        },
+        {
+            "contentUrl": "https://github.com/mensBash/DataStewardship/tree/master/weka_experiment",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-7084-3423",
+            "email": "mensur.besirovic@tuwien.ac.at",
+            "name": "Mensur Besirovic",
+            "affiliation": "Researcher",
+            "@type": "person"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-7084-3423",
+            "email": "mensur.besirovic@tuwien.ac.at",
+            "name": "Mensur Besirovic",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0001-7084-3423"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0001-7084-3423"
+                }
+            ],
+            "identifier": "https://zenodo.org/badge/latestdoi/257124636",
+            "description": "Produced data consist of models, parameters and errors files, each for corresponding analysis",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://github.com/mensBash/DataStewardship/tree/master/weka_experiment",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "File": {
+                        "@id": "https://creativecommons.org/publicdomain/zero/1.0/deed.de"
+                    }
+                }
+            ],
+            "datePublished": "2020-04-19",
+            "name": "Models, parameters and errors",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

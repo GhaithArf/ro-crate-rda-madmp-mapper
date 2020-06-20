@@ -1,0 +1,74 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://orcid.org/0000-0002-0000-0000",
+            "email": "leo.messi@barcelona.com",
+            "name": "Leo Messi",
+            "affiliation": "ProjectLeader",
+            "@type": "person"
+        },
+        {
+            "contentSize": 50000000000,
+            "@id": "Planned distribution",
+            "@type": "File"
+        },
+        {
+            "@id": "https://www.tiss.tuwien.ac.at/person/305962565",
+            "email": "CR@juve.it",
+            "name": "Cristiano Ronaldo",
+            "affiliation": "DataCurator",
+            "@type": "person"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-4929-7875",
+            "email": "robert@bayern.de",
+            "name": "Robert Lewandowski",
+            "affiliation": "DataManager",
+            "@type": "person"
+        },
+        {
+            "@id": "https://www.tiss.tuwien.ac.at/person/2351952424",
+            "email": "john.smith@tuwien.ac.at",
+            "name": "John Smith",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://www.tiss.tuwien.ac.at/person/2351952424"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0002-0000-0000"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-4929-7875"
+                },
+                {
+                    "@id": "https://www.tiss.tuwien.ac.at/person/305962565"
+                }
+            ],
+            "identifier": "https://hdl.handle.net/0000/00.00000",
+            "description": "Images of test object X",
+            "hasPart": [
+                {
+                    "@id": "Planned distribution"
+                }
+            ],
+            "name": "Image collection",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

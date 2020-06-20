@@ -1,0 +1,549 @@
+{
+  "@context": {
+    "affiliation": "http://schema.org/affiliation",
+    "familyName": "http://schema.org/familyName",
+    "givenName": "http://schema.org/givenName",
+    "name": "http://schema.org/name",
+    "address": "http://schema.org/address",
+    "contactPoint": "http://schema.org/contactPoint",
+    "identifier": "http://schema.org/identifier",
+    "memberOf": "http://schema.org/memberOf",
+    "issn": "http://schema.org/issn",
+    "contentSize": "http://schema.org/contentSize",
+    "path": "http://schema.org/contentUrl",
+    "creator": "http://schema.org/creator",
+    "description": "http://schema.org/description",
+    "encodingFormat": "http://schema.org/encodingFormat",
+    "fileFormat": "http://schema.org/fileFormat",
+    "license": "http://schema.org/license",
+    "citation": "http://schema.org/citation",
+    "datePublished": "http://schema.org/datePublished",
+    "funder": "http://schema.org/funder",
+    "hasPart": "http://schema.org/hasPart",
+    "publisher": "http://schema.org/publisher",
+    "isPartOf": "http://schema.org/isPartOf",
+    "contactType": "http://schema.org/contactType",
+    "email": "http://schema.org/email",
+    "Person": "http://schema.org/Person",
+    "Organization": "http://schema.org/Organization",
+    "Periodical": "http://schema.org/Periodical",
+    "File": "http://schema.org/MediaObject",
+    "Place": "http://schema.org/Place",
+    "Dataset": "http://schema.org/Dataset",
+    "ScholarlyArticle": "http://schema.org/ScholarlyArticle",
+    "ContactPoint": "http://schema.org/ContactPoint"
+  },
+  "@graph": [
+    {
+      "@id": "02e3a58b-249b-46ed-9b94-7edc0f20b36f",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "1"
+      },
+      "familyName": "Cook",
+      "givenName": "Janet",
+      "name": "Janet Cook"
+    },
+    {
+      "@id": "1",
+      "@type": "Organization",
+      "address": "Ultimo NSW Australia",
+      "contactPoint": {
+        "@id": "tim.luckett@uts.edu.au"
+      },
+      "identifier": "1",
+      "memberOf": {
+        "@id": "http://uts.edu.au"
+      },
+      "name": "Faculty of Health, University of Technology Sydney"
+    },
+    {
+      "@id": "10",
+      "@type": "Organization",
+      "address": "Haymarket NSW Australia",
+      "identifier": "10",
+      "memberOf": {
+        "@id": "http://uts.edu.au"
+      },
+      "name": "Centre for Health Research and Evaluation (CHERE), Faculty of Business, University of Technology Sydney"
+    },
+    {
+      "@id": "11",
+      "@type": "Organization",
+      "address": "Randwick NSW Australia",
+      "identifier": "11",
+      "memberOf": {
+        "@id": "http://unsw.edu.au"
+      },
+      "name": "Centre for Healthy Brain Ageing, University of New South Wales"
+    },
+    {
+      "@id": "2",
+      "@type": "Organization",
+      "address": "Liverpool",
+      "identifier": "2",
+      "memberOf": {
+        "@id": "http://unsw.edu.au"
+      },
+      "name": "South Western Sydney Clinical School, University of New South Wales"
+    },
+    {
+      "@id": "3",
+      "@type": "Organization",
+      "address": "Liverpool NSW Austraila",
+      "identifier": "3",
+      "name": "Ingham Institute for Applied Medical Research"
+    },
+    {
+      "@id": "4",
+      "@type": "Organization",
+      "address": "Liverpool NSW Austraila",
+      "identifier": "4",
+      "name": "Improving Palliative Care through Clinical Trials (ImPaCCT)"
+    },
+    {
+      "@id": "4f826922-fc88-4787-a316-fb30afb08083",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "10"
+      },
+      "familyName": "Houltram",
+      "givenName": "Jennifer",
+      "name": "Jennifer Houltram"
+    },
+    {
+      "@id": "5",
+      "@type": "Organization",
+      "address": "Camperdown NSW Australia",
+      "identifier": "5",
+      "memberOf": {
+        "@id": "http://sydney.edu.au"
+      },
+      "name": "Sydney Medical School, The University of Sydney"
+    },
+    {
+      "@id": "5e85fd16-45f7-4d65-a065-03f704d73568",
+      "@type": "Periodical",
+      "issn": "1932-6203",
+      "name": "PLOS ONE"
+    },
+    {
+      "@id": "6",
+      "@type": "Organization",
+      "address": "Herston Queensland Australia",
+      "identifier": "6",
+      "memberOf": {
+        "@id": "http://qut.edu.au"
+      },
+      "name": "School of Nursing, Queensland University of Technology"
+    },
+    {
+      "@id": "7",
+      "@type": "Organization",
+      "address": "Newcastle NSW Australia",
+      "identifier": "7",
+      "memberOf": {
+        "@id": "http://newcastle.edu.au"
+      },
+      "name": "School of Medicine and Public Health, The University of Newcastle"
+    },
+    {
+      "@id": "8",
+      "@type": "Organization",
+      "address": "St Lucia QLD Australia",
+      "identifier": "8",
+      "memberOf": "The University of Queensland",
+      "name": "Faculty of Medicine, The University of Queensland"
+    },
+    {
+      "@id": "9",
+      "@type": "Organization",
+      "address": "Baltimore Maryland USA",
+      "identifier": "9",
+      "memberOf": {
+        "@id": "http://www.jhu.edu"
+      },
+      "name": "School of Nursing, Johns Hopkins University"
+    },
+    {
+      "@id": "Data files associated with the IDEAL primary outcome manuscript.docx",
+      "@type": "File",
+      "contentSize": "14039",
+      "path": "Data files associated with the IDEAL primary outcome manuscript.docx",
+      "creator": {
+        "@id": "http://orcid.org/0000-0001-6121-5409"
+      },
+      "description": "Description of data files provided by Tim Luckett",
+      "encodingFormat": "Microsoft Word for Windows",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/412",
+      "license": "CC BY-NC-SA 3.0 AU",
+      "name": "Data files associated with the IDEAL primary outcome manuscript.docx"
+    },
+    {
+      "@id": "IDEAL Nursing home facility descriptors N=20.sav",
+      "@type": "File",
+      "contentSize": "1534",
+      "path": "IDEAL Nursing home facility descriptors N=20.sav",
+      "description": "Baseline characteristics of the 20 nursing homes (Table 1).\r\r\r\r\r\n\r\r\r\r\r\nN.B. Table 1 Questionnaire on Palliative care for Advanced Dementia (qPAD) median scores by group calculated using staff level data in Dataset 2.",
+      "encodingFormat": "SPSS Data File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/638",
+      "license": "CC BY-NC-SA 3.0 AU",
+      "name": "Dataset 1"
+    },
+    {
+      "@id": "IDEAL Resident data N=131.sav",
+      "@type": "File",
+      "contentSize": "68118",
+      "path": "IDEAL Resident data N=131.sav",
+      "encodingFormat": "SPSS Data File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/638",
+      "license": "CC BY-NC-SA 3.0 AU",
+      "name": "Dataset 2"
+    },
+    {
+      "@id": "IDEAL Staff qPAD baseline scores N=290.sav",
+      "@type": "File",
+      "contentSize": "9987",
+      "path": "IDEAL Staff qPAD baseline scores N=290.sav",
+      "description": "Contains \r\r\r\r\r\n\r\r\r\r\r\nbaseline characteristics of the 131 residents (Table 1)\r\r\r\r\r\n\r\r\r\r\r\nEnd of Life Outcomes (family-rated and nurse-rated) total scores and weeks to completion (Tables 2, 3 and 4)\r\r\r\r\r\n\r\r\r\r\r\nN.B. there are more ‘time to completion’ data points than EOLD (End Of Life Dementia) scores since some EOLD responses were provided but unable to generate a valid total score.\r\r\r\r\r\n\r\r\r\r\r\nCase conference (whether or not resident received at least one case conference)\r\r\r\r\r\n\r\r\r\r\r\nQuality of Life in Late-stage Dementia (QUALID) data\r\r\r\r\r\n\r\r\r\r\r\nSymptoms and care during the last month of life (Table 5)",
+      "encodingFormat": "SPSS Data File",
+      "fileFormat": "http://www.nationalarchives.gov.uk/PRONOM/fmt/638",
+      "license": "CC BY-NC-SA 3.0 AU",
+      "name": "Dataset 3"
+    },
+    {
+      "@id": "a7737c67-78eb-47cd-a481-adc9f5e343cf",
+      "@type": "Place"
+    },
+    {
+      "@id": "http://doi.org/10.4225/59/59672c09f4a4b",
+      "@type": "Dataset",
+      "citation": {
+        "@id": "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181020"
+      },
+      "contactPoint": {
+        "@id": "tim.luckett@uts.edu.au"
+      },
+      "path": "./",
+      "creator": [
+        {
+          "@id": "http://orcid.org/0000-0002-6756-6119"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6121-5409"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-4767-5131"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-3691-8230"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-9779-0605"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6520-4213"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-7817-6821"
+        },
+        {
+          "@id": "http://nla.gov.au/nla.party-1509834"
+        },
+        {
+          "@id": "02e3a58b-249b-46ed-9b94-7edc0f20b36f"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-4902-0654"
+        },
+        {
+          "@id": "4f826922-fc88-4787-a316-fb30afb08083"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6611-6565"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-1783-9289"
+        }
+      ],
+      "datePublished": "2017",
+      "description": "Palliative care planning for nursing home residents with advanced dementia is often suboptimal. This study compared effects of facilitated case conferencing (FCC) with usual care (UC) on end-of-life care",
+      "funder": {
+        "@id": "http://dx.doi.org/10.13039/501100003921"
+      },
+      "hasPart": [
+        {
+          "@id": "Data files associated with the IDEAL primary outcome manuscript.docx"
+        },
+        {
+          "@id": "IDEAL Nursing home facility descriptors N=20.sav"
+        },
+        {
+          "@id": "IDEAL Resident data N=131.sav"
+        },
+        {
+          "@id": "IDEAL Staff qPAD baseline scores N=290.sav"
+        }
+      ],
+      "identifier": [
+        "http://doi.org/10.4225/59/59672c09f4a4b",
+        "doi.org/10.4225/59/59672c09f4a4b"
+      ],
+      "name": "Data files associated with the manuscript:Effects of facilitated family case conferencing for advanced dementia: A cluster randomised clinical trial",
+      "publisher": {
+        "@id": "http://uts.edu.au"
+      }
+    },
+    {
+      "@id": "http://dx.doi.org/10.13039/501100003921",
+      "@type": "Organization",
+      "description": "The IDEAL Study was funded by the Australian Department of Health (previously Department of Health and Ageing). The funder played no role in the research",
+      "identifier": [
+        "http://dx.doi.org/10.13039/501100003921",
+        "dx.doi.org/10.13039/501100003921"
+      ],
+      "name": "Australian Department of Health"
+    },
+    {
+      "@id": "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181020",
+      "@type": "ScholarlyArticle",
+      "creator": [
+        {
+          "@id": "http://orcid.org/0000-0002-6756-6119"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6121-5409"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-4767-5131"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-3691-8230"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-9779-0605"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6520-4213"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-7817-6821"
+        },
+        {
+          "@id": "http://nla.gov.au/nla.party-1509834"
+        },
+        {
+          "@id": "02e3a58b-249b-46ed-9b94-7edc0f20b36f"
+        },
+        {
+          "@id": "http://orcid.org/0000-0003-4902-0654"
+        },
+        {
+          "@id": "4f826922-fc88-4787-a316-fb30afb08083"
+        },
+        {
+          "@id": "http://orcid.org/0000-0001-6611-6565"
+        },
+        {
+          "@id": "http://orcid.org/0000-0002-1783-9289"
+        }
+      ],
+      "datePublished": "2017",
+      "identifier": "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0181020",
+      "isPartOf": {
+        "@id": "5e85fd16-45f7-4d65-a065-03f704d73568"
+      },
+      "name": "Effects of facilitated family case conferencing for advanced dementia: A cluster randomised clinical trial"
+    },
+    {
+      "@id": "http://newcastle.edu.au",
+      "@type": "Organization",
+      "address": "Newcastle NSW Australia",
+      "identifier": "http://newcastle.edu.au",
+      "name": "The University of Newcastle"
+    },
+    {
+      "@id": "http://nla.gov.au/nla.party-1509834",
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@id": "1"
+        },
+        {
+          "@id": "9"
+        }
+      ],
+      "familyName": "Davidson",
+      "givenName": "Patricia M",
+      "identifier": "http://nla.gov.au/nla.party-1509834",
+      "name": "Patricia M Davidson"
+    },
+    {
+      "@id": "http://orcid.org/0000-0001-6121-5409",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "1"
+      },
+      "familyName": "Luckett",
+      "givenName": "Tim",
+      "identifier": "http://orcid.org/0000-0001-6121-5409",
+      "name": "Tim Luckett"
+    },
+    {
+      "@id": "http://orcid.org/0000-0001-6520-4213",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "6"
+      },
+      "familyName": "Pond",
+      "givenName": "Dimity",
+      "identifier": "http://orcid.org/0000-0001-6520-4213",
+      "name": "Dimity Pond"
+    },
+    {
+      "@id": "http://orcid.org/0000-0001-6611-6565",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "10"
+      },
+      "familyName": "Goodall",
+      "givenName": "Stephen",
+      "identifier": "http://orcid.org/0000-0001-6611-6565",
+      "name": "Stephen Goodall"
+    },
+    {
+      "@id": "http://orcid.org/0000-0001-7817-6821",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "8"
+      },
+      "familyName": "Mitchell",
+      "givenName": "Geoffrey",
+      "identifier": "http://orcid.org/0000-0001-7817-6821",
+      "name": "Geoffrey Mitchell"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-1783-9289",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "11"
+      },
+      "familyName": "Chenoweth",
+      "givenName": "Lynnette",
+      "identifier": "http://orcid.org/0000-0002-1783-9289",
+      "name": "Lynnette Chenoweth"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-3691-8230",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "1"
+      },
+      "familyName": "Phillips",
+      "givenName": "Jane",
+      "identifier": "http://orcid.org/0000-0002-3691-8230",
+      "name": "Jane Phillips"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-4767-5131",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "5"
+      },
+      "familyName": "Luscombe",
+      "givenName": "Georgina",
+      "identifier": "http://orcid.org/0000-0002-4767-5131",
+      "name": "Georgina Luscombe"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-6756-6119",
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@id": "1"
+        },
+        {
+          "@id": "2"
+        },
+        {
+          "@id": "3"
+        },
+        {
+          "@id": "4"
+        }
+      ],
+      "familyName": "Agar",
+      "givenName": "Meera",
+      "identifier": "http://orcid.org/0000-0002-6756-6119",
+      "name": "Meera Agar"
+    },
+    {
+      "@id": "http://orcid.org/0000-0002-9779-0605",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "4"
+      },
+      "familyName": "Beattie",
+      "givenName": "Elizabeth",
+      "identifier": "http://orcid.org/0000-0002-9779-0605",
+      "name": "Elizabeth Beattie"
+    },
+    {
+      "@id": "http://orcid.org/0000-0003-4902-0654",
+      "@type": "Person",
+      "affiliation": {
+        "@id": "6"
+      },
+      "familyName": "Brooks",
+      "givenName": "Deborah",
+      "identifier": "http://orcid.org/0000-0003-4902-0654",
+      "name": "Deborah Brooks"
+    },
+    {
+      "@id": "http://qut.edu.au",
+      "@type": "Organization",
+      "address": "Brisbane QLD Australia",
+      "identifier": "http://qut.edu.au",
+      "name": "Queensland University of Technology"
+    },
+    {
+      "@id": "http://sydney.edu.au",
+      "@type": "Organization",
+      "address": "Camerdown NSW Australia",
+      "contactPoint": {
+        "@id": "tim.luckett@uts.edu.au"
+      },
+      "identifier": "http://sydney.edu.au",
+      "name": "The University of Sydney "
+    },
+    {
+      "@id": "http://unsw.edu.au",
+      "@type": "Organization",
+      "address": "Randwick NSW Australia",
+      "identifier": "http://unsw.edu.au",
+      "name": "University of New South Wales"
+    },
+    {
+      "@id": "http://uts.edu.au",
+      "@type": "Organization",
+      "address": "Ultimo NSW Australia",
+      "identifier": "http://uts.edu.au",
+      "name": "University of Technology Sydney"
+    },
+    {
+      "@id": "http://www.jhu.edu",
+      "@type": "Organization",
+      "address": "Baltimore Maryland USA",
+      "identifier": "http://www.jhu.edu",
+      "name": "Johns Hopkins University"
+    },
+    {
+      "@id": "tim.luckett@uts.edu.au",
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "tim.luckett@uts.edu.au",
+      "identifier": "tim.luckett@uts.edu.au",
+      "name": "Contact Tim Luckett"
+    }
+  ]
+}
