@@ -1,0 +1,174 @@
+{
+  "dmp": {
+    "title": "Calculation of nice („sunny“) days based on small privately owned solar thermal collector systems",
+    "description": "The aim of the project is to develop an algorithm that is capable to calculate the amount of sunny („nice“) hours of a day based on data collected by solar thermal collectors used to heat up homes. To evaluate the algorithm we will use the data collected by an owner of a solar thermal collector system based in Vienna, Austria. The output of this evaluation should be a\ngraph that tells us how many hours of the day could be considered as sunny with the plotted data in csv files to allow future analysis.",
+    "contact": {
+      "contact_id": {
+        "identifier": "https://orcid.org/0000-0002-2932-9892",
+        "type": "orcid"
+      },
+      "name": "Roland Wallner",
+      "mbox": "roland.wallner@student.tuwien.ac.at"
+    },
+    "contributor": [
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0000-0002-2932-9892",
+          "type": "orcid"
+        },
+        "name": "Roland Wallner",
+        "mbox": "roland.wallner@student.tuwien.ac.at",
+        "role": [
+          "Project Owner",
+          "Data Steward",
+          "Funder",
+          "Programmer",
+          "Quality Control"
+        ]
+      }
+    ],
+    "language": "eng",
+    "created": "2020-04-18 17:00",
+    "modified": "2020-04-18 17:00",
+    "dmp_id": {
+      "identifier": "https://doi.org/10.5281/zenodo.3755940",
+      "type": "doi"
+    },
+    "project": [
+      {
+        "title": "Calculation of nice („sunny“) days based on small privately owned solar thermal collector systems",
+        "description": "The aim of the project is to develop an algorithm that is capable to calculate the amount of sunny („nice“) hours of a day based on data collected by solar thermal collectors used to heat up homes. To evaluate the algorithm we will use the data collected by an owner of a solar thermal collector system based in Vienna, Austria. The output of this evaluation should be a graph that tells us how many hours of the day could be considered as sunny with the plotted data in csv files to allow future analysis.",
+        "start": "2020-04-07",
+        "end": "2020-04-20"
+      }
+    ],
+    "dataset": [
+      {
+        "title": "UVR1611 Logs of Solar Thermal System in Rodaun, Vienna",
+        "description": "Log data of a solar thermal system located in Rodaun, Vienna for the timeframe 2020-01-01 until 2020-04-10",
+        "type": "Collection",
+        "dataset_id": {
+          "type": "url",
+          "identifier": "https://github.com/ralf-saenger/sonnenkollektordaten/tree/2c13133776dec218fcd2d4c7999408d0a293f930"
+        },
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "distribution": [
+          {
+            "title": "sonnenkollektordaten",
+            "access_url": "https://github.com/ralf-saenger/sonnenkollektordaten/tree/2c13133776dec218fcd2d4c7999408d0a293f930",
+            "data_access": "open",
+            "download_url": "https://github.com/ralf-saenger/sonnenkollektordaten/archive/2c13133776dec218fcd2d4c7999408d0a293f930.zip",
+            "format": ["text/csv"],
+            "host": {
+              "title": "Github",
+              "url": "https://github.com",
+              "support_versioning": "yes",
+              "storage_type": "repository"
+            },
+            "license": [
+              {
+                "license_ref": "https://github.com/ralf-saenger/sonnenkollektordaten/blob/2c13133776dec218fcd2d4c7999408d0a293f930/LICENSE",
+                "start_date": "2020-04-11"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Calculation tool for calculation of sunny (\"nice\") days based on small privately owned solar thermal collector systems",
+        "type": "Software",
+        "dataset_id": {
+          "type": "doi",
+          "identifier": "https://doi.org/10.5281/zenodo.3755912"
+        },
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "data_quality_assurance": [
+          "The python files follow the PEP 8 coding standard as close as possible",
+          "Dependencies are listed in the common requirements.txt file readable by tools like pip."
+        ],
+        "distribution": [
+          {
+            "title": "Calculation tool for extracting sunny hours information from solar thermal collector system controllers",
+            "description": "This tool allowes to extract daily information of sun hours by providing it with exported data from specific solar thermal collector system control units. (uvr1611)",
+            "access_url": "https://doi.org/10.5281/zenodo.3755912",
+            "data_access": "open",
+            "download_url": "https://zenodo.org/record/3755912/files/roland-wallner/dss2020-ex1-1.0.1.zip?download=1",
+            "format": [],
+            "host": {
+              "title": "Zenodo",
+              "description": "ZENODO builds and operates a simple and innovative service that enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities. ZENODO enables researchers, scientists, EU projects and institutions to: easily share the long tail of small research results in a wide variety of formats including text, spreadsheets, audio, video, and images across all fields of science. display their research results and get credited by making the research results citable and integrate them into existing reporting lines to funding agencies like the European Commission. easily access and reuse shared research results.",
+              "url": "https://zenodo.org",
+              "support_versioning": "yes",
+              "storage_type": "repository",
+              "pid_system": ["doi"]
+            },
+            "license": [
+              {
+                "license_ref": "https://opensource.org/licenses/mit-license.php",
+                "start_date": "2020-04-17"
+              }
+            ]
+          },
+          {
+            "title": "Calculation of sunny (\"nice\") days based on small privately owned solar thermal collector systems",
+            "description": "The aim of this project is to use the information extracted from the control units of small privately owned solar thermal collectors to calculate the amount of hours of sunshine a day had. The goal is to is to allow to extract useful information from otherwise unused data, that can be used to get a much more fine-grained image of weather data.",
+            "access_url": "https://github.com/roland-wallner/dss2020-ex1/releases/tag/1.0.1",
+            "data_access": "open",
+            "download_url": "https://github.com/roland-wallner/dss2020-ex1/archive/1.0.1.zip",
+            "format": [],
+            "host": {
+              "title": "Github",
+              "url": "https://github.com",
+              "support_versioning": "yes",
+              "storage_type": "repository"
+            },
+            "license": [
+              {
+                "license_ref": "https://opensource.org/licenses/mit-license.php",
+                "start_date": "2020-04-17"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Sunny Hours in Rodaun 2020-01 until 2020-04",
+        "type": "Dataset",
+        "dataset_id": {
+          "type": "doi",
+          "identifier": "https://doi.org/10.5281/zenodo.3751578"
+        },
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "distribution": [
+          {
+            "title": "Sunny Hours in Rodaun 2020-01 until 2020-04",
+            "description": "This data shows the results of my analysis of raw data captured by a control unit of a solar thermal collector system in Rodaun, Vienna.",
+            "access_url": "https://doi.org/10.5281/zenodo.3751578",
+            "data_access": "open",
+            "download_url": "https://zenodo.org/record/3751578/files/rodaun_results.zip?download=1",
+            "format": ["text/csv", "image/png"],
+            "host": {
+              "title": "Zenodo",
+              "description": "ZENODO builds and operates a simple and innovative service that enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities. ZENODO enables researchers, scientists, EU projects and institutions to: easily share the long tail of small research results in a wide variety of formats including text, spreadsheets, audio, video, and images across all fields of science. display their research results and get credited by making the research results citable and integrate them into existing reporting lines to funding agencies like the European Commission. easily access and reuse shared research results.",
+              "url": "https://zenodo.org",
+              "support_versioning": "yes",
+              "storage_type": "repository",
+              "pid_system": ["doi"]
+            },
+            "license": [
+              {
+                "license_ref": "http://creativecommons.org/licenses/by/4.0/legalcode",
+                "start_date": "2020-04-14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cost": [],
+    "ethical_issues_exist": "no"
+  }
+}

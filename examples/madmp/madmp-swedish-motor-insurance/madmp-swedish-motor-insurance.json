@@ -1,0 +1,97 @@
+{
+  "dmp": {
+    "dmp_id": {
+      "identifier": "https://doi.org/10.5281/zenodo.3753030",
+      "type": "doi"
+    },
+    "title": "Predicting total payments in Swedish Motor Insurance",
+    "description": "The experiment is based on Swedish Motor Insurance data set which describes third party automobile insurance claims for the year 1977 in Sweden. The goal here was to analyze the data and to perform simple linear regression for the 2 points of interest in this dataset: number of claims (the frequency) and sum of payments (the severity). In order to do that, we had to split the dataset into training and test set, apply predictions in the test set according to a training and to come up with measures for our predictions",
+    "language": "eng",
+    "created": "2020-04-15T20:00:00.000Z",
+    "contact": {
+      "contact_id": {
+        "identifier": "https://orcid.org/0000-0002-4844-6306",
+        "type": "orcid"
+      },
+      "mbox": "sibincic.aleksandar@gmail.com",
+      "name": "Sibincic Aleksandar"
+    },
+    "contributor": [
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0000-0002-4844-6306",
+          "type": "orcid"
+        },
+        "mbox": "sibincic.aleksandar@gmail.com",
+        "name": "Sibincic Aleksandar",
+        "role": ["Data Steward"]
+      }
+    ],
+    "cost": [],
+    "dataset": [
+      {
+        "dataset_id": {
+          "identifier": "https://www.kaggle.com/floser/swedish-motor-insurance",
+          "type": "url"
+        },
+        "title": "Swedish Motor Insurance",
+        "description": "These data were compiled by the Swedish Committee on the Analysis of Risk Premium in Motor Insurance, summarized in Hallin and Ingenbleek (1983) and Andrews and Herzberg (1985). The data are cross-sectional, describing third party automobile insurance claims for the year 1977.",
+        "issued": "2018-02-10",
+        "language": "eng",
+        "personal_data": "no",
+        "sensitive_data": "no",
+        "type": "software",
+        "keyword": ["swedish", "motor", "insurance"],
+        "distribution": [
+          {
+            "title": "SwedishMotorInsurance",
+            "data_access": "open",
+            "byte_size": 60000000,
+            "license": [
+              {
+                "license_ref": "https://creativecommons.org/publicdomain/zero/1.0/",
+                "start_date": "2020-04-15"
+              }
+            ],
+            "host": {
+              "title": "GitHub",
+              "url": "https://github.com/aleksandarsibincic/SwedishMotorInsurance_LinearRegression",
+              "support_versioning": "yes"
+            }
+          }
+        ],
+        "metadata": [
+          {
+            "language": "eng",
+            "metadata_standard_id": {
+              "identifier": "http://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+              "type": "url"
+            }
+          }
+        ]
+      }
+    ],
+    "project": [
+      {
+        "start": "2020-04-07",
+        "end": "2020-04-20",
+        "title": "Predicting payments in Swedish Motor Insurance",
+        "funding": [
+          {
+            "funder_id": {
+              "identifier": "http://dx.doi.org/10.13039/100010661",
+              "type": "url"
+            },
+            "funding_status": "applied",
+            "grant_id": {
+              "identifier": "1234567",
+              "type": "other"
+            }
+          }
+        ]
+      }
+    ],
+    "ethical_issues_exist": "no",
+    "modified": "2020-04-16T18:49:00.000Z"
+  }
+}

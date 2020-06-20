@@ -1,0 +1,31 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "http://orcid.org/0000-0000-0000-0000",
+            "email": "cc@example.com",
+            "name": "Charlie Chaplin",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "http://orcid.org/0000-0000-0000-0000"
+            },
+            "identifier": "https://doi.org/10.0000/00.0.5678",
+            "name": "Placeholder dataset",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

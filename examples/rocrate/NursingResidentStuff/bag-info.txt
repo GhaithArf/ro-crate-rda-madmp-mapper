@@ -1,0 +1,7 @@
+BagIt-Profile-Identifier: https://raw.githubusercontent.com/UTS-eResearch/RO-Crate/master/spec/1.0/profile-datacrate-v1.0.json
+DataCrate-Specification-Identifier: undefined
+Contact-Email: tim.luckett@uts.edu.au
+Contact-Name: Contact Tim Luckett
+SourceOrganization: University of Technology Sydney
+External-Description: Palliative care planning for nursing home residents with advanced dementia is often suboptimal. This study compared effects of facilitated case conferencing (FCC) with usual care (UC) on end-of-life care
+Bagging-Date: 2019-07-18T03:02:09.795Z

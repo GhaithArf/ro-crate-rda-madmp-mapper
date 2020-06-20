@@ -1,0 +1,74 @@
+{
+  "dmp": {
+    "contact": {
+      "contact_id": {
+        "identifier": "https://orcid.org/0000-0001-7084-3423",
+        "type": "orcid"
+      },
+      "mbox": "mensur.besirovic@tuwien.ac.at",
+      "name": "Mensur Besirovic"
+    },
+    "contributor": [
+      {
+        "contributor_id": {
+          "identifier": "https://orcid.org/0000-0001-7084-3423",
+          "type": "orcid"
+        },
+        "mbox": "mensur.besirovic@tuwien.ac.at",
+        "name": "Mensur Besirovic",
+        "role": ["Creator", "Researcher"]
+      }
+    ],
+    "created": "2020-04-20 14:00",
+    "dataset": [
+      {
+        "data_quality_assurance": "Naming convention for files and folders",
+        "dataset_id": {
+          "identifier": "https://zenodo.org/badge/latestdoi/257124636",
+          "type": "doi"
+        },
+        "description": "Produced data consist of models, parameters and errors files, each for corresponding analysis",
+        "distribution": {
+          "access_url": "https://github.com/mensBash/DataStewardship/tree/master/weka_experiment",
+          "data_access": "open",
+          "host": {
+            "backup_type": "Dropbox",
+            "description": "Repository on github",
+            "title": "DataStewardship",
+            "url": "https://github.com/mensBash/DataStewardship"
+          },
+          "license": {
+            "license_ref": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+            "start_date": "2020-04-19"
+          }
+        },
+        "issued": "2020-04-19",
+        "language": "eng",
+        "personal_data": "no",
+        "security_and_privacy": [
+          {
+            "description": "Keep the private keys and passwords for the repository safe",
+            "title": "Security of the repository"
+          }
+        ],
+        "sensitive_data": "no",
+        "technical_resource": [
+          {
+            "description": "Software used for the experiment analysis",
+            "name": "Weka Toolkit (Explorer)"
+          }
+        ],
+        "title": "Models, parameters and errors"
+      }
+    ],
+    "description": "The evaluation of the two classification algorithms: random forests and multilayer perceptron (MLP) on the example of an analysis of thyroid disease record dataset. Dataset consist of 3772 instances and 30 attributes. The data is preprocessed, and the mentioned algorithm are executed, in Weka Toolkit (Explorer).",
+    "dmp_id": {
+      "identifier": "https://doi.org/10.5281/zenodo.3757969",
+      "type": "doi"
+    },
+    "ethical_issues_exist": "no",
+    "language": "eng",
+    "modified": "2020-04-20 14:00",
+    "title": "Analysis of multilayer perceptron on hypothyroid dataset using Weka DMP"
+  }
+}

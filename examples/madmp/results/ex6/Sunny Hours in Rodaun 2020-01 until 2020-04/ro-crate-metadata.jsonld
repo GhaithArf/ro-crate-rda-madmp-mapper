@@ -1,0 +1,70 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "http://creativecommons.org/licenses/by/4.0/legalcode",
+            "@type": "license"
+        },
+        {
+            "contentUrl": "https://doi.org/10.5281/zenodo.3751578",
+            "downloadUrl": "https://zenodo.org/record/3751578/files/rodaun_results.zip?download=1",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "affiliation": "Quality Control",
+            "@type": "person"
+        },
+        {
+            "@id": "http://creativecommons.org/licenses/by/4.0/legalcode",
+            "@type": "File"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0002-2932-9892"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0002-2932-9892"
+                }
+            ],
+            "identifier": "https://doi.org/10.5281/zenodo.3751578",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://doi.org/10.5281/zenodo.3751578",
+                        "downloadUrl": "https://zenodo.org/record/3751578/files/rodaun_results.zip?download=1",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "http://creativecommons.org/licenses/by/4.0/legalcode"
+                }
+            ],
+            "name": "Sunny Hours in Rodaun 2020-01 until 2020-04",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://creativecommons.org/licenses/by/4.0/",
+            "@type": "license"
+        },
+        {
+            "@id": "https://creativecommons.org/licenses/by/4.0/",
+            "@type": "File"
+        },
+        {
+            "endDate": "2029-01-30",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://orcid.org/0000-0000-0000-0000",
+            "email": "TMiksa@sba-research.org",
+            "name": "Tomasz Miksa",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0000-0000-0000"
+            },
+            "identifier": "10.9876/zenodo.1234567",
+            "description": "Data which shows...",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "endDate": "2029-01-30",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "datePublished": "2019-06-30",
+            "name": "Cool data",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "dmp": {
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-6756-6119"
+                },
+                "name": "Meera Agar"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0001-6121-5409"
+                },
+                "name": "Tim Luckett"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "0bdb2fb6-a787-4f51-bfde-58e78c67ccb6"
+                },
+                "name": "Jennifer Houltram"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0001-6611-6565"
+                },
+                "name": "Stephen Goodall"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-1783-9289"
+                },
+                "name": "Lynnette Chenoweth"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-4767-5131"
+                },
+                "name": "Georgina Luscombe"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-3691-8230"
+                },
+                "name": "Jane Phillips"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-9779-0605"
+                },
+                "name": "Elizabeth Beattie"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0001-6520-4213"
+                },
+                "name": "Dimity Pond"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0001-7817-6821"
+                },
+                "name": "Geoffrey Mitchell"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://nla.gov.au/nla.party-1509834"
+                },
+                "name": "Patricia M Davidson"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "ea615e1b-2238-471a-bca1-eb71dc18cef8"
+                },
+                "name": "Janet Cook"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0003-4902-0654"
+                },
+                "name": "Deborah Brooks"
+            }
+        ],
+        "dataset": [
+            {
+                "issued": "42928",
+                "distribution": [
+                    {
+                        "access_url": "https://data.research.uts.edu.au/examples/ro-crate/0.2luckett.zip"
+                    },
+                    {
+                        "title": "data/Data files associated with the IDEAL primary outcome manuscript.docx",
+                        "type": "File",
+                        "byte_size": "14039",
+                        "description": "Description of data files provided by Tim Luckett",
+                        "format": "Microsoft Word for Windows"
+                    },
+                    {
+                        "title": "data/IDEAL Nursing home facility descriptors N=20.sav",
+                        "type": "File",
+                        "byte_size": "1534",
+                        "description": "Baseline characteristics of the 20 nursing homes (Table 1).\r\r\r\r\r\r\n\r\r\r\r\r\r\nN.B. Table 1 Questionnaire on Palliative care for Advanced Dementia (qPAD) median scores by group calculated using staff level data in Dataset 2.",
+                        "format": "SPSS Data File"
+                    },
+                    {
+                        "title": "data/IDEAL Resident data N=131.sav",
+                        "type": "File",
+                        "byte_size": "68118",
+                        "format": "SPSS Data File"
+                    },
+                    {
+                        "title": "data/IDEAL Staff qPAD baseline scores N=290.sav",
+                        "type": "File",
+                        "byte_size": "9987",
+                        "description": "Contains \r\r\r\r\r\r\n\r\r\r\r\r\r\nbaseline characteristics of the 131 residents (Table 1)\r\r\r\r\r\r\n\r\r\r\r\r\r\nEnd of Life Outcomes (family-rated and nurse-rated) total scores and weeks to completion (Tables 2, 3 and 4)\r\r\r\r\r\r\n\r\r\r\r\r\r\nN.B. there are more \u00e2\u20ac\u02dctime to completion\u00e2\u20ac\u2122 data points than EOLD (End Of Life Dementia) scores since some EOLD responses were provided but unable to generate a valid total score.\r\r\r\r\r\r\n\r\r\r\r\r\r\nCase conference (whether or not resident received at least one case conference)\r\r\r\r\r\r\n\r\r\r\r\r\r\nQuality of Life in Late-stage Dementia (QUALID) data\r\r\r\r\r\r\n\r\r\r\r\r\r\nSymptoms and care during the last month of life (Table 5)",
+                        "format": "SPSS Data File"
+                    }
+                ],
+                "dataset_id": {
+                    "identifier": "doi.org/10.4225/59/59672c09f4a4b"
+                },
+                "title": "Data files associated with the manuscript:Effects of facilitated family case conferencing for advanced dementia: A cluster randomised clinical trial"
+            }
+        ],
+        "dmp_id": {
+            "identifier": "Please Create an identifier for DMP",
+            "type": "PLease fill in the type of the identifier"
+        },
+        "title": "DMP title",
+        "created": "2020-06-20 22:08",
+        "modified": "2020-06-20 22:08",
+        "ethical_issues_exist": "unknown"
+    }
+}

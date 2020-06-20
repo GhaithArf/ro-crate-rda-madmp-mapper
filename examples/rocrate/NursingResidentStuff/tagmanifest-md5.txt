@@ -1,0 +1,4 @@
+9e5ad981e0d29adc278f6a294b8c2aca  bagit.txt
+d6e45daa1417d844d1a818404ad4e7cf  manifest-md5.txt
+bf72b1c957dd8595fd81d979edbe24d3  bag-info.txt
+57ac63ea666d779b81d7b1153c4a31a7  ro-crate-metadata.jsonld
