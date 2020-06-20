@@ -164,6 +164,7 @@ def remove_digits_string(string):
                                 1] if clean_string.endswith(".") else clean_string
     return clean_string
 
+
 def _add_key_value_all(dictonary, key="@id", value=""):
     """Recursively add key ("@id") with value ("") to facilitate tracking.
 
@@ -183,6 +184,7 @@ def _add_key_value_all(dictonary, key="@id", value=""):
             if not type(item) is str:
                 item[key] = value
                 _add_key_value_all(item, key, value)
+
 
 def get_unnested_jsonld(dictionary):
     """Unnest json to prepare for jsonld format.
@@ -215,7 +217,7 @@ def get_unnested_jsonld(dictionary):
                 val2[keys_sequence[-2]
                      ] = {"@id": val2[keys_sequence[-2]][keys_sequence[-1]]["@id"]}
             except:
-                print("Warning: @id not found")
+                pass
     return out
 
 
