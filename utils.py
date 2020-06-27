@@ -1,6 +1,7 @@
+from collections import OrderedDict
 import json
 import requests
-from collections import OrderedDict
+
 
 ROCRATE_CURRENT_VERSION = 1.0
 _SCHEMA_URL = "https://researchobject.github.io/ro-crate/{}/context.jsonld".format(
@@ -165,7 +166,7 @@ def remove_digits_string(string):
     return clean_string
 
 
-def _add_key_value_all(dictonary, key="@id", value=""):
+def add_key_value_all(dictonary, key="@id", value=""):
     """Recursively add key ("@id") with value ("") to facilitate tracking.
 
     :param dictonary: dict object
@@ -175,15 +176,15 @@ def _add_key_value_all(dictonary, key="@id", value=""):
     if type(dictonary) is dict:
         for k, v in dictonary.items():
             if type(v) is list:
-                _add_key_value_all(v, key, value)
+                add_key_value_all(v, key, value)
             elif type(v) is dict:
                 v[key] = value
-                _add_key_value_all(v, key, value)
+                add_key_value_all(v, key, value)
     elif type(dictonary) is list:
         for item in dictonary:
             if not type(item) is str:
                 item[key] = value
-                _add_key_value_all(item, key, value)
+                add_key_value_all(item, key, value)
 
 
 def get_unnested_jsonld(dictionary):
@@ -219,19 +220,3 @@ def get_unnested_jsonld(dictionary):
             except:
                 pass
     return out
-
-
-def log(msg):
-    """Add prefix to the provided message and print the result.
-
-    :param msg: message to be printed.
-    """
-    # TODO: Implement this
-    # Dynamically identify the module where the function was called, add prefix accordignly and print
-    module = ""
-    if "mapper" in module.lower():
-        print("{}: {}".format(_LOG_PREFIX_MAPPER, msg))
-    elif "rocrate" in module.lower():
-        print("{}: {}".format(_LOG_PREFIX_ROCRATE, msg))
-    elif "madmp" in module.lower():
-        print("{}: {}".format(_LOG_PREFIX_MADMP, msg))
