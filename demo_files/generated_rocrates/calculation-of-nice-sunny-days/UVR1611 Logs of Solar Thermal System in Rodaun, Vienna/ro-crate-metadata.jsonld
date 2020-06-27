@@ -1,0 +1,71 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://github.com/ralf-saenger/sonnenkollektordaten/blob/2c13133776dec218fcd2d4c7999408d0a293f930/LICENSE",
+            "@type": "license"
+        },
+        {
+            "contentUrl": "https://github.com/ralf-saenger/sonnenkollektordaten/tree/2c13133776dec218fcd2d4c7999408d0a293f930",
+            "downloadUrl": "https://github.com/ralf-saenger/sonnenkollektordaten/archive/2c13133776dec218fcd2d4c7999408d0a293f930.zip",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://github.com/ralf-saenger/sonnenkollektordaten/blob/2c13133776dec218fcd2d4c7999408d0a293f930/LICENSE",
+            "@type": "File"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "affiliation": "Quality Control",
+            "@type": "person"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0002-2932-9892"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0002-2932-9892"
+                }
+            ],
+            "identifier": "https://github.com/ralf-saenger/sonnenkollektordaten/tree/2c13133776dec218fcd2d4c7999408d0a293f930",
+            "description": "Log data of a solar thermal system located in Rodaun, Vienna for the timeframe 2020-01-01 until 2020-04-10",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://github.com/ralf-saenger/sonnenkollektordaten/tree/2c13133776dec218fcd2d4c7999408d0a293f930",
+                        "downloadUrl": "https://github.com/ralf-saenger/sonnenkollektordaten/archive/2c13133776dec218fcd2d4c7999408d0a293f930.zip",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "https://github.com/ralf-saenger/sonnenkollektordaten/blob/2c13133776dec218fcd2d4c7999408d0a293f930/LICENSE"
+                }
+            ],
+            "name": "UVR1611 Logs of Solar Thermal System in Rodaun, Vienna",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

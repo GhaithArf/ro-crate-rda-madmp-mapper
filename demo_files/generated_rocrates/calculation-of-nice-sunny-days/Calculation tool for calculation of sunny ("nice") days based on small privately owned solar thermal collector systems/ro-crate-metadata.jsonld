@@ -1,0 +1,82 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+        {
+            "@id": "https://opensource.org/licenses/mit-license.php",
+            "@type": "license"
+        },
+        {
+            "contentUrl": "https://github.com/roland-wallner/dss2020-ex1/releases/tag/1.0.1",
+            "downloadUrl": "https://github.com/roland-wallner/dss2020-ex1/archive/1.0.1.zip",
+            "@type": "DataDownload"
+        },
+        {
+            "contentUrl": "https://doi.org/10.5281/zenodo.3755912",
+            "downloadUrl": "https://zenodo.org/record/3755912/files/roland-wallner/dss2020-ex1-1.0.1.zip?download=1",
+            "@type": "DataDownload"
+        },
+        {
+            "@id": "https://opensource.org/licenses/mit-license.php",
+            "@type": "File"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "affiliation": "Quality Control",
+            "@type": "person"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2932-9892",
+            "email": "roland.wallner@student.tuwien.ac.at",
+            "name": "Roland Wallner",
+            "@type": "ContactPoint"
+        },
+        {
+            "contactPoint": {
+                "@id": "https://orcid.org/0000-0002-2932-9892"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0002-2932-9892"
+                }
+            ],
+            "identifier": "https://doi.org/10.5281/zenodo.3755912",
+            "distribution": [
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://doi.org/10.5281/zenodo.3755912",
+                        "downloadUrl": "https://zenodo.org/record/3755912/files/roland-wallner/dss2020-ex1-1.0.1.zip?download=1",
+                        "@type": "DataDownload"
+                    }
+                },
+                {
+                    "DataDownload": {
+                        "contentUrl": "https://github.com/roland-wallner/dss2020-ex1/releases/tag/1.0.1",
+                        "downloadUrl": "https://github.com/roland-wallner/dss2020-ex1/archive/1.0.1.zip",
+                        "@type": "DataDownload"
+                    }
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "https://opensource.org/licenses/mit-license.php"
+                }
+            ],
+            "name": "Calculation tool for calculation of sunny (\"nice\") days based on small privately owned solar thermal collector systems",
+            "Language": "eng",
+            "@type": "Dataset",
+            "@id": "./"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

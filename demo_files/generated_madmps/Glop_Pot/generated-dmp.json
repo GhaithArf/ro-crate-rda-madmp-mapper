@@ -1,0 +1,93 @@
+{
+    "dmp": {
+        "contact": [
+            {
+                "contact_id": {
+                    "identifier": "mike.lake@uts.edu.au"
+                },
+                "type": "customer service",
+                "mbox": "mike.lake@uts.edu.au",
+                "name": "ID: mike.lake@uts.edu.au, contactType: customer service, email: mike.lake@uts.edu.au"
+            }
+        ],
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0003-4953-0830"
+                },
+                "mbox": "mike.lake@uts.edu.au",
+                "name": "Mike Lake"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "Keir Vaughan-Taylor"
+                },
+                "mbox": "keir@example.com",
+                "name": "Keir Vaughan-Taylor"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-2038-7922"
+                },
+                "mbox": "andreas@example.com",
+                "name": "Andreas Klocker"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0003-4953-9114"
+                },
+                "mbox": "phil@example.com",
+                "name": "Phil Maynard"
+            }
+        ],
+        "dataset": [
+            {
+                "issued": "2017",
+                "distribution": [
+                    {
+                        "access_url": "https://data.research.uts.edu.au/examples/ro-crate/0.2Glop_Pot.zip"
+                    },
+                    {
+                        "title": "data/cp7glop.svx",
+                        "type": "File",
+                        "byte_size": "2058",
+                        "description": "Survex data file for Glop Pot",
+                        "format": "Plain Text File"
+                    },
+                    {
+                        "title": "data/cp7glop.ai",
+                        "type": "File",
+                        "byte_size": "383766",
+                        "description": "Illustrator file for Glop Pot",
+                        "format": "Acrobat PDF 1.5 - Portable Document Format",
+                        "license": {
+                            "license_ref": "https://creativecommons.org/licenses/by/3.0/au/"
+                        }
+                    },
+                    {
+                        "title": "data/asf"
+                    },
+                    {
+                        "title": "data/datasheets"
+                    },
+                    {
+                        "title": "data/sketchsheets",
+                        "description": "Metadata file for Glop Pot sketch sheets"
+                    }
+                ],
+                "dataset_id": {
+                    "identifier": "dx.doi.org/10.1016/this_is_an_example_not_a_real_DOI"
+                },
+                "title": "Glop Pot data"
+            }
+        ],
+        "dmp_id": {
+            "identifier": "Please Create an identifier for DMP",
+            "type": "PLease fill in the type of the identifier"
+        },
+        "title": "DMP title",
+        "created": "2020-06-28 00:54",
+        "modified": "2020-06-28 00:54",
+        "ethical_issues_exist": "unknown"
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "dmp": {
+        "contributor": [
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0002-8367-6908"
+                },
+                "name": "J. Xuan"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0003-0690-4732"
+                },
+                "name": "J. Lu"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "http://orcid.org/0000-0003-3960-0583"
+                },
+                "name": "G. Zhang"
+            },
+            {
+                "contributor_id": {
+                    "identifier": "https://orcid.org/0000-0002-6953-3986"
+                },
+                "name": "X. Luo"
+            }
+        ],
+        "dataset": [
+            {
+                "issued": "2018-03-10",
+                "distribution": [
+                    {
+                        "access_url": "https://data.research.uts.edu.au/examples/ro-crate/0.2GTM.zip"
+                    },
+                    {
+                        "title": "data/gtm_gs.m",
+                        "type": "File",
+                        "byte_size": "12656",
+                        "format": "Plain Text File"
+                    },
+                    {
+                        "title": "data/LICENSE",
+                        "type": "File",
+                        "byte_size": "35049",
+                        "format": "Plain Text File"
+                    },
+                    {
+                        "title": "data/README.txt",
+                        "type": "File",
+                        "byte_size": "984",
+                        "format": "Plain Text File"
+                    },
+                    {
+                        "title": "data/test_gtm.m",
+                        "type": "File",
+                        "byte_size": "527",
+                        "format": "Plain Text File"
+                    },
+                    {
+                        "title": "data/GTM",
+                        "description": "This demo is the sampling inference for Graph Topic Model, and more details about this model can be found in the following reference:                @ARTICLE{7015568,         author={J. Xuan and J. Lu and G. Zhang and X. Luo},         journal={IEEE Transactions on Cybernetics},         title={Topic Model for Graph Mining},         year={2015},         volume={45},         A Markov chain Monte Carlo (MCMC) algorithm is developed and implemented to inference the Graph Topic Model (GTM). GTM is a probabilistic graphical model for the data represented by graph structure, e.g., chemical formulas or documents."
+                    }
+                ],
+                "dataset_id": {
+                    "identifier": "doi.org/10.4225/59/59e3d6d08faa9"
+                },
+                "title": "GTM"
+            }
+        ],
+        "dmp_id": {
+            "identifier": "Please Create an identifier for DMP",
+            "type": "PLease fill in the type of the identifier"
+        },
+        "title": "DMP title",
+        "created": "2020-06-28 00:54",
+        "modified": "2020-06-28 00:54",
+        "ethical_issues_exist": "unknown"
+    }
+}
