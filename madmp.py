@@ -1,27 +1,24 @@
-import json
-from os import listdir, mkdir
+from os import listdir, makedirs
 from os.path import isfile, isdir, join
 import pprint
 import copy
+import logging
 
-from utils import log, get_sequence_keys, flatten_json, unflatten_json, remove_digits_string, _add_key_value_all, get_unnested_jsonld
+from utils import *
+
+
+logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s][%(module)s]: %(message)s")
 
 
 class MADMP:
 
-    # TODO: Should the user provide the path to the json file or to the project?
-    #		1 to many in the assignment means we only have one file for maDMP
-    #		Support both file path and project path?
-
     def __init__(self, path):
-        # TODO: json file path or project path? look in subfolders?
         self.path = path
         self.madmp = self.load_madmp()
 
     def load_madmp(self):
         """Load the metadata file from the given path"""
-        # TODO: cleanup
-        json_path = ""
+        json_path = None
         if isfile(self.path) and self.path.lower().endswith(".json"):
             json_path = self.path
         elif isdir(self.path):
@@ -32,11 +29,11 @@ class MADMP:
                     with open(json_path, 'r') as file:
                         try:
                             madmp = json.loads(file.read())
-                            print(
+                            logging.info(
                                 "Successfully located the maDMP json file within the provided path.")
                             # Update path accordingly
                             setattr(self, "path", json_path)
-                            print("The maDMP path is set to {}".format(json_path))
+                            logging.info("The maDMP path is set to {}".format(json_path))
                             break
                         except:
                             pass
@@ -45,7 +42,7 @@ class MADMP:
                 "Unable to locate the maDMP json file using the provided path.")
         try:
             with open(json_path, 'r') as file:
-                print("Loading maDMP file...")
+                logging.info("Loading maDMP file...")
                 try:
                     return json.loads(file.read())
                 except json.JSONDecodeError:
@@ -62,7 +59,6 @@ class MADMP:
         for i in range(len(self.madmp["dmp"]["dataset"])):
             # keep only one dataset for each iteration (one-to-many)
             current_dataset = copy.deepcopy(self.madmp)
-            #x = json.dumps(dict(current_dataset["dmp"]["dataset"][i]))
             current_dataset["dmp"]["dataset"] = current_dataset["dmp"]["dataset"][i]
             rocrate = self._convert_one_of_many(
                 current_dataset, mapping_data)
@@ -76,21 +72,20 @@ class MADMP:
     @staticmethod
     def _save_one_rocrate(rocrate, output_path, title):
         try:
-            mkdir(join(output_path, title))
-        except OSError:
-            print("Creation of the directory %s failed" %
-                  join(output_path, title))
+            makedirs(join(output_path, title), exist_ok=True)
+        except OSError as e:
+            logging.error("Creation of the directory %s failed" % join(output_path, title))
+            raise e
         else:
-            print("Successfully created the directory %s " %
+            logging.info("Successfully created the directory %s " %
                   join(output_path, title))
         try:
-            print("Saving the generated rocrate of",
-                  title, "to the provided path...")
+            logging.info("Saving the generated rocrate of {}to the provided path...".format(title))
             with open(join(output_path, title, "ro-crate-metadata.jsonld"), 'w') as f:
                 json.dump(rocrate, f, indent=4)
-            print("Saving is complete.")
+            logging.info("Saving is complete.")
         except:
-            print("Failed to save the generated rocrate.")
+            logging.error("Failed to save the generated rocrate.")
 
     def _convert_one_of_many(self, current_dataset, mapping_data):
         """Convert one of the dataset to a rocrate.
@@ -101,7 +96,7 @@ class MADMP:
         rocrate = {}
         status_list = []
         # flaten json
-        _add_key_value_all(current_dataset)
+        add_key_value_all(current_dataset)
         json_flattened = flatten_json(current_dataset)
         level_id = 0
         new_item = False
@@ -149,7 +144,7 @@ class MADMP:
     def convert_json_jsonld(json_nested):
         """ Convert from json to jsonld and include other missing mandatory attributes.
 
-        :param dictonary: dict object to convert
+        :param json_nested: dict object to convert
         :return: dict object containg the obtained jsonld
         """
         jsonld = {}
