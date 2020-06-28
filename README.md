@@ -603,7 +603,14 @@ folder and run the following command ```pytest -vv```.
 Unit tests are made to test the functionality of some methods within the different modules and are not testing the 
 mapping functionality.
 
+## Contributors
+
+![Ghaith Arfaoui](https://orcid.org/sites/default/files/images/orcid_16x16.png) [Ghaith Arfaoui](https://orcid.org/0000-0001-9554-5684)
+
+![Maroua Jaoua](https://orcid.org/sites/default/files/images/orcid_16x16.png) [Maroua Jaoua](https://orcid.org/0000-0001-8109-9644)
+
+
 
 # License
 
-Source Code: [MIT](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
