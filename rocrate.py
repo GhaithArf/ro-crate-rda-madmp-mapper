@@ -212,7 +212,7 @@ class ROCrate:
         # set some defaults because they have no equivalents
         final_madmp["dmp"]["dmp_id"] = {
             "identifier": "Please Create an identifier for DMP",
-            "type": "PLease fill in the type of the identifier"}
+            "type": "Please fill in the type of the identifier"}
         final_madmp["dmp"]["title"] = "DMP title"
         final_madmp["dmp"]["created"] = datetime.now().strftime(
             "%Y-%m-%d %H:%M")
