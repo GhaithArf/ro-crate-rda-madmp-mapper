@@ -1,0 +1,76 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.0/context",
+  "@graph": [
+    {
+      "@id": "https://orcid.org/0000-0001-9554-5684",
+      "name": "Ghaith Arfaoui",
+      "email": "ghaith.17@gmail.com",
+      "affiliation": {
+        "@id":"https://www.tuwien.at/"
+      },
+      "@type": "person"
+    },
+    {
+        "@id": "https://orcid.org/0000-0001-9554-5684",
+        "email": "ghaith.17@gmail.com",
+        "name": "Ghaith Arfaoui",
+        "affiliation": {
+          "@id":"https://www.tuwien.at/"
+        },
+        "@type": "ContactPoint"
+    },
+    {
+      "@id": "https://www.tuwien.at/",
+      "@type": "Organization",
+      "address": "Karlsplatz 13, 1040 Vienna, Austria",
+      "identifier": "6",
+      "name": "Vienna University of Technology"
+    },
+    {
+      "@id": "https://zenodo.org/record/1039839",
+      "@type": "license"
+    },
+    {
+      "contactPoint": {
+          "@id": "https://orcid.org/0000-0001-9554-5684"
+      },
+      "author": [
+          {
+              "@id": "https://orcid.org/0000-0001-9554-5684"
+          }
+      ],
+      "identifier": "https://doi.org/10.5281/zenodo.1039839",
+      "description": "Gapminder represents a resource of several datasets containing information about (almost) all countries around the world over the last two centuries.",
+      "distribution": [
+        {
+          "DataDownload": {
+              "contentUrl": "https://www.gapminder.org/data/",
+              "downloadUrl": "https://www.gapminder.org/data/",
+              "@type": "DataDownload"
+            }
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "https://zenodo.org/record/1039839"
+        }
+      ],
+      "datePublished": "2017-10-31",
+      "keywords": "World Development",
+      "name": "Gapminder World Development Indicators",
+      "Language": "eng",
+      "@type": "Dataset",
+      "@id": "./"
+    },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

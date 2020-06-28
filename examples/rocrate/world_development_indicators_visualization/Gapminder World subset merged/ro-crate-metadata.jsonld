@@ -1,0 +1,76 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.0/context",
+  "@graph": [
+    {
+      "@id": "https://orcid.org/0000-0001-9554-5684",
+      "name": "Ghaith Arfaoui",
+      "email": "ghaith.17@gmail.com",
+      "affiliation": {
+        "@id":"https://www.tuwien.at/"
+      },
+      "@type": "person"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9554-5684",
+      "email": "ghaith.17@gmail.com",
+      "name": "Ghaith Arfaoui",
+      "affiliation": {
+        "@id":"https://www.tuwien.at/"
+      },
+      "@type": "ContactPoint"
+    },
+    {
+      "@id": "https://www.tuwien.at/",
+      "@type": "Organization",
+      "address": "Karlsplatz 13, 1040 Vienna, Austria",
+      "identifier": "6",
+      "name": "Vienna University of Technology"
+    },
+    {
+      "@id": "https://github.com/GhaithArf/visualisation-dashboard/blob/master/LICENSE",
+      "@type": "license"
+    },
+    {
+      "contactPoint": {
+          "@id": "https://orcid.org/0000-0001-9554-5684"
+      },
+      "author": [
+          {
+              "@id": "https://orcid.org/0000-0001-9554-5684"
+          }
+      ],
+      "identifier": "https://doi.org/10.5281/zenodo.1039839",
+      "description": "The data consists of multiple \"Gapminder World\" datasets merged together. Gapminder provides several datasets containing information about (almost) all countries around the world over the last two centuries.\nThe transformation consists of merging the CSV files and correcting the country and the region names when necessary.",
+      "distribution": [
+        {
+          "DataDownload": {
+              "contentUrl": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+              "downloadUrl": "https://github.com/GhaithArf/visualisation-dashboard/tree/master/data/merged",
+              "@type": "DataDownload"
+            }
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "https://zenodo.org/record/1039839"
+        }
+      ],
+      "datePublished": "2020-04-19",
+      "keywords": "World Development",
+      "name": "GapMinder World subset merged",
+      "Language": "eng",
+      "@type": "Dataset",
+      "@id": "./"
+    },
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.jsonld",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.0"
+            },
+            "about": {
+                "@id": "./"
+            }
+        }
+    ]
+}

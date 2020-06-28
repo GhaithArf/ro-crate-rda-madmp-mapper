@@ -1,0 +1,137 @@
+{
+	"@context": "https://w3id.org/ro/crate/1.0/context",
+	"@graph": [{
+			"@id": "1",
+			"email": "Elaine.Fehrman@nottshc.nhs.uk",
+			"name": "Elaine Fehrman",
+			"affiliation": {
+				"@id": "5"
+			},
+			"@type": "person"
+		},
+		{
+			"@id": "2",
+			"email": "Vincent.Egan@nottingham.ac.uk",
+			"name": "Vincent Egan",
+			"affiliation": {
+				"@id": "5"
+			},
+			"@type": "person"
+		},
+		{
+			"@id": "3",
+			"email": "em322@le.ac.uk",
+			"name": "Evgeny M. Mirkes",
+			"affiliation": {
+				"@id": "6"
+			},
+			"@type": "person"
+		},
+		{
+			"@id": "4",
+			"name": "Awaz K. Muhammad",
+			"affiliation": {
+				"@id": "6"
+			},
+			"@type": "person"
+		},
+		{
+			"@id": "7",
+			"email": "ag153@le.ac.uk",
+			"name": "Alexander Gorban",
+			"affiliation": {
+				"@id": "6"
+			},
+			"@type": "person"
+		},
+		{
+			"@id": "5",
+			"@type": "Organization",
+			"address": "Duncan Macmillan House Porchester Road Nottingham, UK",
+			"identifier": "5",
+			"name": "Search Results Web result with site links Nottinghamshire Healthcare NHS Foundation Trust"
+		},
+		{
+			"@id": "6",
+			"@type": "Organization",
+			"address": "Leicester, LE1 7RH, UK",
+			"identifier": "6",
+			"name": "University of Leicester"
+		},
+		{
+			"contactPoint": {
+				"@id": "https://orcid.org/0000-0001-9554-5684"
+			},
+			"author": [{
+					"@id": "1"
+				},
+				{
+					"@id": "2"
+				},
+				{
+					"@id": "3"
+				},
+				{
+					"@id": "4"
+				}
+			],
+			"description": "Database contains records for 1885 respondents. For each respondent 12 attributes are known: Personality measurements which include NEO-FFI-R (neuroticism, extraversion, openness to experience, agreeableness, and conscientiousness), BIS-11 (impulsivity), and ImpSS (sensation seeking), level of education, age, gender, country of residence and ethnicity. All input attributes are originally categorical and are quantified. After quantification values of all input features can be considered as real-valued. In addition, participants were questioned concerning their use of 18 legal and illegal drugs (alcohol, amphetamines, amyl nitrite, benzodiazepine, cannabis, chocolate, cocaine, caffeine, crack, ecstasy, heroin, ketamine, legal highs, LSD, methadone, mushrooms, nicotine and volatile substance abuse and one fictitious drug (Semeron) which was introduced to identify over-claimers. For each drug they have to select one of the answers: never used the drug, used it over a decade ago, or in the last decade, year, month, week, or day.",
+			"distribution": [{
+				"DataDownload": {
+					"contentUrl": "https://archive.ics.uci.edu/ml/datasets/Drug+consumption+%28quantified%29",
+					"downloadUrl": "https://archive.ics.uci.edu/ml/datasets/Drug+consumption+%28quantified%29",
+					"@type": "DataDownload"
+				}
+			}],
+			"hasPart": [{
+				"@id": "https://archive.ics.uci.edu/ml/datasets/Drug+consumption+%28quantified%29"
+			}],
+			"datePublished": "2016-10-17",
+			"keywords": "Drug",
+			"name": "Drug consumption (quantified) Data Set",
+			"Language": "eng",
+			"@type": "Dataset",
+			"@id": "./"
+		},
+		{
+      "@id": "https://arxiv.org/abs/1506.06297v2",
+      "@type": "ScholarlyArticle",
+      "creator": [
+        {
+          "@id": "1"
+        },
+        {
+          "@id": "1"
+        },
+        {
+          "@id": "2"
+        },
+        {
+          "@id": "3"
+        },
+        {
+          "@id": "4"
+        },
+        {
+          "@id": "7"
+        }
+      ],
+      "datePublished": "2015",
+      "identifier": "https://arxiv.org/abs/1506.06297v2",
+      "isPartOf": {
+        "@id": "https://arxiv.org/abs/1506.06297v2"
+      },
+      "name": "The Five Factor Model of personality and evaluation of drug consumption risk"
+    },
+		{
+			"@type": "CreativeWork",
+			"@id": "ro-crate-metadata.jsonld",
+			"conformsTo": {
+				"@id": "https://w3id.org/ro/crate/1.0"
+			},
+			"about": {
+				"@id": "./"
+			}
+		}
+	]
+}
