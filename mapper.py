@@ -1,15 +1,14 @@
 from argparse import ArgumentParser
-
 from rocrate import *
 from madmp import *
 from os.path import join
 
 
+logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s][%(module)s]: %(message)s")
+
+
 class Mapper:
 
-    # TODO: The user does not have to explicitally mention the desired operation (rocrate to madmp or madmp to rocrate)
-    #  		Based on the provided path, identify the type of the input and perform the mapping
-    # TODO: Mapping will be based on the content of the file "mapping.json"
     # TODO: Integrate "CalcyteJS: https://code.research.uts.edu.au/eresearch/CalcyteJS" within madmp_to_rocrate to
     # 		generate a preview web page after mapping.
 
@@ -20,28 +19,28 @@ class Mapper:
 
     def is_rocrate(self):
         """Check on a high level whether the provided root folder is for a rocrate."""
-        print("Checking if file is a ro-crate...")
+        logging.info("Checking if file is a ro-crate...")
         filenames = [p[2] for p in walk(self.root_folder_path)]
         for filename in filenames:
             for file in filename:
                 if file == "ro-crate-metadata.jsonld":
-                    print("File is a ro-crate...")
+                    logging.info("File is a ro-crate...")
                     return True
-        print("File is NOT a ro-crate...")
+        logging.info("File is NOT a ro-crate...")
         return False
 
     def is_madmp(self):
         try:
-            print("Checking if file is a madmp...")
+            logging.info("Checking if file is a madmp...")
             self.madmp = MADMP(self.root_folder_path)
             return True
         except:
-            print("File is NOT a madmp...")
+            logging.info("File is NOT a madmp...")
             return False
 
     def rocrates_to_madmp(self):
         try:
-            print("Converting ro-crate(s) to madmp...")
+            logging.info("Converting ro-crate(s) to madmp...")
             filepaths = [join(path, name) for path, subdirs, files in walk(
                 self.root_folder_path) for name in files]
             all_parts = []
@@ -49,21 +48,21 @@ class Mapper:
                 if filepath.endswith("ro-crate-metadata.jsonld"):
                     rocrate = ROCrate(filepath.split(
                         "ro-crate-metadata.jsonld")[0])
-                    part_of_madmp = rocrate.convert_rocrate_to_maDMP()
+                    part_of_madmp = rocrate.convert_rocrate_to_madmp()
                     all_parts.append(part_of_madmp)
             rocrate.merge_converted_rocrates(all_parts, self.output_path)
-            print("Conversion is complete.")
+            logging.info("Conversion is complete.")
         except Exception as e:
-            print("Failed to convert ro-crate(s) to madmp.")
-            print("ERROR:", e)
+            logging.error("Failed to convert ro-crate(s) to madmp.")
+            logging.error("ERROR: {}".format(e))
 
-    def madmp_to_rocrate(self, generate_preview=True):
+    def madmp_to_rocrate(self, generate_preview=False):
         try:
-            print("Converting madmp to ro-crate(s)...")
+            logging.info("Converting madmp to ro-crate(s)...")
             self.madmp.convert_madmp_to_rocrate(self.output_path)
         except Exception as e:
-            print("Failed to convert madmp to ro-crate(s).")
-            print("ERROR:", e)
+            logging.error("Failed to convert madmp to ro-crate(s).")
+            logging.error("ERROR: {}".format(e))
 
 
 def run(root_folder_path, output_path):
@@ -73,14 +72,14 @@ def run(root_folder_path, output_path):
     elif mapper.is_madmp():
         mapper.madmp_to_rocrate()
     else:
-        print("The root folder includes neither ro-crate nor madmp.")
+        logging.error("The root folder includes neither ro-crate nor madmp.")
 
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument("-r", "--root-folder", dest="root_folder_path", help="Path to the root folder corresponding "
+    parser.add_argument("-i", "--input-path", dest="input_path", help="Path to the root folder corresponding "
                         "to a maDMP or RO-Crate.")
     parser.add_argument("-o", "--output-path", dest="output_path",
                         help="Path where to mapped data will be stored.")
     args = parser.parse_args()
-    run(args.root_folder_path, args.output_path)
+    run(args.input_path, args.output_path)
