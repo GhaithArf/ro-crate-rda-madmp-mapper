@@ -1,3 +1,4 @@
+from os import path
 import unittest
 
 from madmp import *
@@ -8,7 +9,7 @@ class TestMADMP(unittest.TestCase):
 		"""Check that loading ma-DMPs works as expected."""
 		# Test using existing project path
 		try:
-			MADMP("../examples/madmp/world_development_indicators_visualization_madmp.json")
+			MADMP(path.join("..", "examples", "madmp", "madmp-world-development-indicators"))
 		except Exception as error:
 			self.fail("Exception raised while instantiating ROCrate object using an existing path!")
 		# Test using a broken path
