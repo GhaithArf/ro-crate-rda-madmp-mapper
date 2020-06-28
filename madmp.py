@@ -1,13 +1,15 @@
 from os import listdir, makedirs
-from os.path import isfile, isdir, join
+from os.path import isfile, isdir, join, dirname, abspath
 import pprint
 import copy
 import logging
+import re
 
 from utils import *
 
 
-logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s][%(module)s]: %(message)s")
+logging.basicConfig(level=logging.DEBUG,
+                    format="[%(levelname)s][%(module)s]: %(message)s")
 
 
 class MADMP:
@@ -33,7 +35,8 @@ class MADMP:
                                 "Successfully located the maDMP json file within the provided path.")
                             # Update path accordingly
                             setattr(self, "path", json_path)
-                            logging.info("The maDMP path is set to {}".format(json_path))
+                            logging.info(
+                                "The maDMP path is set to {}".format(json_path))
                             break
                         except:
                             pass
@@ -71,17 +74,24 @@ class MADMP:
 
     @staticmethod
     def _save_one_rocrate(rocrate, output_path, title):
+        title = re.sub('[><:/\"|?*]', "", title).replace("\\", "")
+        path_direc = join(dirname(
+            abspath(__file__)), join(output_path, title))
+        if len(path_direc) >= 240:
+            path_direc = u'\\\\?\\' + path_direc
         try:
-            makedirs(join(output_path, title), exist_ok=True)
+            makedirs(path_direc, exist_ok=True)
         except OSError as e:
-            logging.error("Creation of the directory %s failed" % join(output_path, title))
+            logging.error("Creation of the directory %s failed" %
+                          join(output_path, title))
             raise e
         else:
             logging.info("Successfully created the directory %s " %
-                  join(output_path, title))
+                         join(output_path, title))
         try:
-            logging.info("Saving the generated rocrate of {}to the provided path...".format(title))
-            with open(join(output_path, title, "ro-crate-metadata.jsonld"), 'w') as f:
+            logging.info(
+                "Saving the generated rocrate of {}to the provided path...".format(title))
+            with open(join(path_direc, "ro-crate-metadata.jsonld"), 'w') as f:
                 json.dump(rocrate, f, indent=4)
             logging.info("Saving is complete.")
         except:
