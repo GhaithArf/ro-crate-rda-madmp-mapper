@@ -1,31 +1,25 @@
-import json
+import ast
+from datetime import datetime
+import logging
 from os import listdir, walk
 from os.path import isfile, join
 import pprint
-from utils import get_json_keys, load_rocrate_schema, find_parent_keys, flatten_json, unflatten_json, remove_digits_string
 import re
-import ast
-from datetime import datetime
+
+from utils import *
 
 
 _ROCRATE_METADATA_FILENAME = "ro-crate-metadata.jsonld"
-_ROCRATE_PREVIEW = "ro-crate-preview.html"
+_ROCRATE_PREVIEW_FILENAME = "ro-crate-preview.html"
+logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s][%(module)s]: %(message)s")
 
 
 class ROCrate:
 
-    # TODO: Use class methods
-    # TODO: Create separate classes for preview and metadata???
-    # TODO: GENERAL: Use prefixes for the different components of the framework when "logging"/stdout printing
-    #		Example: [RO-Crate] log message
-    #				 [maDMP] log message
-    #		Look at log helper function in utils
-    # TODO: Fix docstrings
-
     def __init__(self, path):
         self.root_folder = self.locate_root_folder(path)
         self.metadata = self.load_metadata()
-        # self.preview = self.load_preview()
+        self.preview = self.load_preview()
 
     @staticmethod
     def locate_root_folder(path, check_name=True):
@@ -55,9 +49,9 @@ class ROCrate:
         if metadata_file:
             with open("{}/{}".format(self.root_folder, metadata_file[0]), 'r') as file:
                 if metadata_file[0] != _ROCRATE_METADATA_FILENAME:
-                    print("Warning: Metadata file name: '{}' is different than {}".format(
+                    logging.warning("Warning: Metadata file name: '{}' is different than {}".format(
                         metadata_file, _ROCRATE_METADATA_FILENAME))
-                print("Loading metadata file...")
+                logging.info("Loading metadata file...")
                 try:
                     return json.loads(file.read())
                 except json.JSONDecodeError:
@@ -68,7 +62,6 @@ class ROCrate:
 
     def check_metadata_schema(self):
         """Return True if the metadata schema matches the expected one, False otherwise."""
-        # TODO: Consider all metadata attributes
         current_attributes = []
         get_json_keys(self.metadata, current_attributes)
         schema_attributes = []
@@ -80,40 +73,42 @@ class ROCrate:
         """Return True if a RO-Crate website exists, False otherwise.
 
         :param check_name: if True look for "ro-crate-preview.html", otherwise consider all "html" files.
+        :param check_metadata: if True, check if the metadata stored in the preview is the same as the loaded one
         """
         # html file: MUST Contain a copy of the RO-Crate JSON-LD in a script element of the head element of the HTML
-        # TODO: Clean and probably restructure (too many local variables)
         subdirs = [p[0] for p in walk(self.root_folder)]
         html_path = None
         for dir in subdirs:
             if check_name:
-                if isfile(join(dir, _ROCRATE_PREVIEW)):
-                    html_path = join(dir, _ROCRATE_PREVIEW)
+                if isfile(join(dir, _ROCRATE_PREVIEW_FILENAME)):
+                    html_path = join(dir, _ROCRATE_PREVIEW_FILENAME)
                     break
             else:
                 for file in listdir(dir):
                     if file.endswith('.html'):
-                        html_path = join(dir, _ROCRATE_PREVIEW)
+                        html_path = join(dir, _ROCRATE_PREVIEW_FILENAME)
                         break
         if html_path:
-            print("Loading preview webpage...")
-            html_file = open(html_path, 'r', encoding="utf-8")
-            source_code = html_file.read()
-            if check_metadata:
-                # TODO: IMPROVE: use python native html parser instead of relyin on regex
-                source_code_trimmed = source_code.replace(
-                    "\n", "").replace('\r', '')
-                search = re.findall(
-                    r'<script type="application/ld\+json">(.*?)</script>', source_code_trimmed)
-                if not json.loads((search[0])) == self.metadata:
-                    raise Exception(
-                        "Preview webpage found, but does not contain a copy of the RO-Crate metadata.")
-            return source_code
+            logging.info("Loading preview webpage...")
+            try:
+                html_file = open(html_path, 'r', encoding="utf-8")
+                source_code = html_file.read()
+                if check_metadata:
+                    source_code_trimmed = source_code.replace(
+                        "\n", "").replace('\r', '')
+                    search = re.findall(
+                        r'<script type="application/ld\+json">(.*?)</script>', source_code_trimmed)
+                    if not json.loads((search[0])) == self.metadata:
+                        logging.warning("Preview webpage found, but does not contain a copy of the RO-Crate metadata.")
+                return source_code
+            except Exception as error:
+                logging.error("An exception was raised when loading preview")
+                logging.error("Exception: {}".format(error))
         else:
-            print("Unable to locate preview webpage.")
+            logging.warning("Unable to locate preview webpage.")
             return None
 
-    def convert_rocrate_to_maDMP(self):
+    def convert_rocrate_to_madmp(self):
         """Convert one rocrate to one initial DMP and save it.
         """
         self.nest_rocrate()
@@ -134,8 +129,7 @@ class ROCrate:
             # get all set of parents of the current id's value
             keys_maps = list(find_parent_keys(jsonld_graph, idn))
             # get the attribute that has to be nested (contains only two keys)
-            att_to_nest = [keys_map[0]
-                           for keys_map in keys_maps if len(keys_map) == 2]
+            att_to_nest = [keys_map[0] for keys_map in keys_maps if len(keys_map) == 2]
             delete_att = False
             # if there is an attribute to nest, iterate over all key sequences and nest
             if att_to_nest != []:
@@ -168,8 +162,6 @@ class ROCrate:
         madmp_initial = {}
         self._modify_based_on_root(eq_dmp, madmp_initial)
         # convert the keys
-        with open(r"C:\Users\Maroua Jaoua\Desktop\Data Science Master\Data Stewardship\madmp_initial.json", 'w') as f:
-            json.dump(madmp_initial, f, indent=4)
         level_id = 0
         for key_flat, value_flat in madmp_initial.items():
             key_clean = remove_digits_string(key_flat)
@@ -189,21 +181,8 @@ class ROCrate:
                     k_flat = k_flat.replace(
                         "." + level[0] + ".", "." + level[0] + "." + str(level[2]) + ".")
                 madmp[k_flat] = value_flat
-        self.add_necessary_missing_att(madmp)
         madmp = unflatten_json(madmp)
-        with open(r"C:\Users\Maroua Jaoua\Desktop\Data Science Master\Data Stewardship\madmp_unflat.json", 'w') as f:
-            json.dump(mapping_data, f, indent=4)
         return madmp
-
-    def has_preview_files(self):
-        pass
-
-    def has_dataset_payload(self):
-        # The base RO-Crate specification makes no assumptions about the presence of any specific files or folders
-        # beyond the reserved RO-Crate files described above. Payload files may appear directly in the RO-Crate Root
-        # alongside the RO-Crate Metadata File, and/or appear in sub-directories of the RO-Crate Root. Each file and
-        # directory MAY be represented as Data Entities in the RO-Crate Metadata File.
-        pass
 
     @staticmethod
     def merge_converted_rocrates(list_of_dicts, output_path):
@@ -242,15 +221,14 @@ class ROCrate:
         final_madmp["dmp"]["ethical_issues_exist"] = "unknown"
         # save json
         try:
-            print("Saving the generated madmp to the provided path...")
+            logging.info("Saving the generated madmp to the provided path...")
             with open(join(output_path, "generated-dmp.json"), 'w') as f:
                 json.dump(final_madmp, f, indent=4)
-            print("Saving is complete.")
-            print("The path of the generated madmp is:", join(
-                output_path, "generated-dmp.json"))
+            logging.info("Saving is complete.")
+            logging.info("The path of the generated madmp is: {}".format(join(output_path, "generated-dmp.json")))
         except Exception as e:
-            print("Failed to save the generated madmp.")
-            print("ERROR:", e)
+            logging.error("Failed to save the generated madmp.")
+            logging.error("ERROR:", e)
         return final_madmp
 
     @staticmethod
@@ -355,14 +333,6 @@ class ROCrate:
                     for level in status_list:
                         if level[0] == x and level[1] == level_id and new_item:
                             level[2] += 1
-
-    def add_necessary_missing_att(self, madmp):
-        """Add the attributes which should be present in madmp. But, are missing.
-            The madmp schema should be loaded.
-            https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard/blob/master/examples/JSON/JSON-schema/1.0/maDMP-schema-1.0.json
-            If attribute is in required and is not in madmp, it should be defautled."""
-        # TODO: implement
-        pass
 
     def __repr__(self):
         return pprint.pformat(self.metadata)
