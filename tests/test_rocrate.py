@@ -1,7 +1,12 @@
+from os import path
 import unittest
+import sys
+
+sys.path.append(path.join(".."))
 
 from rocrate import *
 
+ROCRATE_EXAMPLE_PATH = path.join("..", "examples", "rocrate", "GTM")
 
 class TestROCrate(unittest.TestCase):
 
@@ -9,7 +14,7 @@ class TestROCrate(unittest.TestCase):
 		"""Check that loading RO-Crate files works as expected."""
 		# Test using existing project path
 		try:
-			ROCrate("../examples/rocrate/GTM")
+			ROCrate(ROCRATE_EXAMPLE_PATH)
 		except Exception as error:
 			self.fail("Exception raised while instantiating ROCrate object using an existing path!")
 		# Test using a broken path
