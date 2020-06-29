@@ -1,6 +1,7 @@
 # RO-Crate RDA maDMP Mapper
 
 
+[![DOI](https://zenodo.org/badge/262980184.svg)](https://zenodo.org/badge/latestdoi/262980184)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
 
 
@@ -556,7 +557,7 @@ Where ```input_path``` represents a path to the input folder (or file) represent
 
 It is not required to explicitally define the mapping direction (maDMP to RO-Crate or RO-Crate to maDMP) since this 
 is handled within the tool.
-
+x
 ## Examples
 
 Several maDMP and RO-Crate examples are also provided. They are structured in the following way:
