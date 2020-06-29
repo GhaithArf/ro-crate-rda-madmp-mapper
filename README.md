@@ -1,7 +1,11 @@
 # RO-Crate RDA maDMP Mapper
 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
+
+
 ``` Ro-Crate RDA maDMP Mapper ``` is a tool that defines mapping between [RO-Crate](https://researchobject.github.io/ro-crate/) and 
-[RDA maDMP](https://researchobject.github.io/ro-crate/). It allows generating RO-Crate(s) from maDMP (1 to many) and 
+[RDA maDMP](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard). It allows generating RO-Crate(s) from maDMP (1 to many) and 
 maDMP from RO-Crate(s) (many to 1).
 
 ## Mapping
@@ -605,12 +609,14 @@ mapping functionality.
 
 ## Contributors
 
-![Ghaith Arfaoui](https://orcid.org/sites/default/files/images/orcid_16x16.png) [Ghaith Arfaoui](https://orcid.org/0000-0001-9554-5684)
+[![Ghaith Arfaoui](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-9554-5684)
+[Ghaith Arfaoui](https://orcid.org/0000-0001-9554-5684)
 
-![Maroua Jaoua](https://orcid.org/sites/default/files/images/orcid_16x16.png) [Maroua Jaoua](https://orcid.org/0000-0001-8109-9644)
+[![Maroua Jaoua](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-8109-9644) 
+[Maroua Jaoua](https://orcid.org/0000-0001-8109-9644)
 
 
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
+[MIT License](https://github.com/GhaithArf/ro-crate-rda-madmp-mapper/blob/master/LICENSE)
